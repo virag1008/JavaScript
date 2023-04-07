@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        function Try(a,b){
+           if(b == undefined){
+            return function (c){
+                return a+c;
+            }
+           }else{
+            return a+b
+           }
+        }
+
+        console.log( Try(1)(2));
+        console.log( Try(1,2));
+
+    </script>
+</body>
+</html>

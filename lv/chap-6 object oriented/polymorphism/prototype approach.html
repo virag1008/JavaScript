@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function A() {
+
+        }
+        function B() {
+
+        }
+
+        A.prototype.display = function () {
+            return "A claas's Display method is called"
+        }
+        B.prototype = Object.create(A.prototype);
+
+        var vir = [new A(), new B()]
+        vir.forEach(function (message) {
+            document.write(message.display() + "<br>")
+        })
+
+
+        // METHOD 2
+
+
+
+        // function A() {
+
+        // }
+        // function B() {
+
+        // }
+
+        // A.prototype.display = function () {
+        //     return "A claas's Display method is called"
+        // }
+        // //B.prototype = Object.create(A.prototype);
+        // B.prototype.display = function () {
+        //     return "B claas's Display method is called"
+        // }
+
+        // var vir = [new A(), new B()]
+        // vir.forEach(function (message) {
+        //     document.write(message.display() + "<br>")
+        // })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#" onsubmit="submitFun()">
+      <label for="Name"> Name </label>
+      <input
+        type="text"
+        id="Name"
+        name="Name"
+        value="Virag"
+        onclick="funName(this)"
+        onblur="fun_2(this)"
+        oninput="fun_3(this)"
+        onchange="changeFunction(this)"
+        onselect="selectFun()"
+        oninvalid="alert('Please fill name')"
+        required
+      />
+
+      <br /><br />
+
+      <label for="class">Class</label>
+      <input
+        type="text"
+        id="Class"
+        name="Class"
+        onclick="funName(this)"
+        onblur="fun_2(this)"
+        oninput="fun_3(this)"
+        onchange="changeFunction(this)"
+        onselect="selectFun()"
+        oninvalid="invalidFun()"
+        oninvalid="alert('Please fill name')"
+        required
+      />
+
+      <br /><br />
+
+      <label for="country">Country</label>
+      <select
+        name="country"
+        id="country"
+        onclick="funName(this)"
+        onblur="fun_2(this)"
+        onchange="changeFunction(this)"
+      >
+        <option value="India">India</option>
+        <option value="Pak">Pak</option>
+        <option value="Aus">Aus</option>
+        <option value="Nepal">Nepal</option>
+        <option value="China">China</option>
+      </select>
+
+      <input type="submit" />
+    </form>
+
+    <br /><br />
+
+    <div id="z" style="margin-left: 40px; border: 1px solid red"></div>
+
+    <script src="./FocusBlurInput event.js"></script>
+  </body>
+</html>

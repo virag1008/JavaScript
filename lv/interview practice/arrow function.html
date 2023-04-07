@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var add = (a, b) => a + b + 100;
+        document.write(add(10, 20) + '<br>');
+        document.write(add(20, 20) + '<hr>');
+
+
+        // When there is only 1 parameter then it does not req. paranthesis.
+        var add = a => a + 100;
+        document.write(add(10) + '<br>');
+        document.write(add(20, 20) + '<hr>'); //take only first argument
+
+
+        // When there is no parameter then it req. paranthesis.
+        var add = () => "hello" + 100;
+        document.write(add() + '<br>');
+        document.write(add(20) + '<hr>'); // not taking any argument.
+
+
+        // it will show undefinde bcoz we taken curly bracketbut not return keyword.
+        var add = (a, b) => { a + b + 100 };
+        document.write(add(10, 20) + '<br>');
+        document.write(add(20, 20) + '<hr>');
+
+        // it will not show undefinde bcoz we taken curly bracketbut return keyword.
+        var add = (a, b) => { 
+            const c = 10;
+            return a + b + c + 100;
+        };
+        document.write(add(10, 20) + '<br>');
+        document.write(add(20, 20) + '<hr>');
+
+
+        // returning the object { foo: "a" } in ()
+        var add = () => ({ foo: "a" })
+        document.write(add() + '<br>');
+        document.write(add() + '<hr>');
+
+
+        // Default parameters are supported, and always require parentheses
+        var add = (a = 100, b = 200) => a + b + 100;
+        document.write(add(10, 20) + '<br>');
+        document.write(add() + '<hr>');
+
+
+        //Destructuring within params is supported, and always requires parentheses:
+        var add_1 = ([a, b] = [10, 20]) => a + b;
+        var add_2 = ({ a, b } = { a: 10, b: 20 }) => a+b;
+        console.log(add_1());
+        console.log(add_2());
+        console.log(add_1 ( [30,40] ));
+        console.log(add_2 ( {a:30,b:40} ));
+
+    </script>
+</body>
+
+</html>

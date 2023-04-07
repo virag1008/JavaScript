@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function outerFun(a){
+
+            function innerFun(b){
+                return a*b;
+            }
+
+            return innerFun;
+            // inner function la return karne is mandatory
+        }
+        var result = outerFun(5);
+
+        document.write(result(6) + "<br>");
+        document.write(result(7) + "<br>");
+
+        document.write(outerFun(8)(6) + "<br>");
+
+     
+    </script>
+</body>
+</html>

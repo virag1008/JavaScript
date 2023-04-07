@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Simple program
+
+        // var a = ["a","b","c"];
+        // document.writeln("below from that error line code is not executed ")
+        // console.log(a);
+        // console.log(b);
+        // document.write("hiii")
+
+        // TRY CATCH METHOD
+
+        try {
+            var a = ["a", "b", "c"];
+            console.log(a);
+
+            document.writeln("below from that error line code is not executed <br>")
+
+            console.log(b);
+            // document.write("hiii")
+            // this line will not execute bcoz we need to write it below the catch block
+        } catch (err) {
+            alert("code error is : " + err.message)
+        }
+
+        document.write("hiii")
+    </script>
+</body>
+
+</html>

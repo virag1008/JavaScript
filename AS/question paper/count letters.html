@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function charcount(str) {
+        var obj = {};
+
+        for (i = 0; i < str.length; i++) {
+          var count = 0;
+          for (j = 0; j < str.length; j++) {
+            if (str[i] == str[j]) {
+                count++
+            }
+          }
+          obj[str[i]] = count;
+        }
+        return obj;
+      }
+
+      console.log(charcount("Programming"));
+
+      //   o/p { P:1, r:2, o:1, g:2, ..... }
+
+      // let s = 'Programmig'
+      // console.log(s.length)
+
+    //   var obj = {
+    //     a:1,
+    //     b:2
+    //   }
+    //   obj['c'] = 3;
+    //   console.log(obj)
+
+
+
+
+    var a = [1,23,4,5];
+
+    var b = Math.max.apply(null,a);
+    console.log(b)
+    </script>
+  </body>
+</html>

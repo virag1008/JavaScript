@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        alert("hello Customer" + "\n" + "virag is here")
+    </script> -->
+
+    <!-- <script src="/baiscs/ext.js"></script> -->
+
+    <script>
+        var arr = ["grapes", "banana", "mango", "pineapple", "apple"];
+
+        // alert(arr);
+
+        // arr.forEach(element => {
+        //     alert(element)
+        // });
+
+        // for(i=0; i < arr.length; i++){
+        //     alert(arr[i])
+        // };
+
+        // for (iterator of arr) {
+        //     alert(iterator)
+        // }
+    </script>
+
+
+
+
+
+
+
+    <script>
+        const person = {
+            "firstName": "virag",
+            "lastName": "jain",
+            "age": 26
+        }
+
+        // document.write(`the person ${person.firstName} ${person.lastName} having age ${person.age} is very kind hearted person.`)
+
+
+        // document.write(`the person ${person.firstName + " " + person.lastName} having age ${person.age} is very kind hearted person.`)
+
+
+        // function fullname(){
+        //     return person.firstName + person.lastName
+        // }
+        // document.write(`the person ${fullname()} having age ${person.age} is very kind hearted person.`)
+
+
+        // for (const key in person ) {
+        //     if (person.hasOwnProperty.call(person, key)) {
+        //         const element = person[key];
+        //         alert(element)
+        //     }
+        // }
+
+        for(value in person){
+            alert(value + " :- " + person[value])
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> the result will display after 3 seconds</p>
+    <p id="id1"></p>
+    <script>
+
+    // SIMPLE SET-TIMEOUT FUNCTION EXAMPLE
+    
+        // function funName (value){
+        //     document.getElementById("id1").innerHTML = value;
+        // }
+        // setTimeout( function(){
+        //     funName("LearnVern is awesome")
+        // } ,3000)
+
+
+    // SIMPLE SET-TIMEOUT in PROMISE FUNCTION EXAMPLE
+    
+        let myPromise123 = new Promise(function(myResolve,myReject){
+            setTimeout(function(){
+                myResolve("virag is awesome")
+            }, 3000)
+        });
+        myPromise123.then( function(value){
+            document.getElementById("id1").innerHTML = value
+            }
+        )
+
+
+
+    </script>
+</body>
+</html>

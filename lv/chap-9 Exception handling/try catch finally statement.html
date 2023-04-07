@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Please enter a number between 5 to 10
+    <input type="text" id="id1">
+    <button type="button" onclick="onClick()"> Validate </button>
+    <p id="id2"></p>
+    <p id="id3"></p>
+    <script>
+        function onClick(){
+            var msg = document.getElementById("id2");
+            msg.innerHTML = "";
+            var zyx = document.getElementById("id3");
+            var ab = document.getElementById("id1").value;
+                
+            try{
+                if(ab == "") throw "input is empty";
+                if (isNaN(ab)) throw "input is not a number";
+                if( ab > 10) throw "given input is grether than 10 ";
+                if( ab < 5) throw "given input is less than 5 ";
+            }catch(e){
+                msg.innerHTML = e;
+            }finally{
+               zyx.innerHTML = "entered value is: " + ab
+            }
+            document.getElementById("id1").value = "";
+        }
+
+    </script>
+</body>
+</html>

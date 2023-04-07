@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="post" onsubmit="return funName()" >
+        email id : <input type="text" id="id1">
+        <input type="submit">
+    </form>
+
+    <script>
+        function funName(){
+            var a = document.getElementById("id1").value;
+            var atposition = a.indexOf("@");
+            var dotposition = a.indexOf(".");
+
+            // jr "@" & "." position input madhe nasel tr -1 yeil.
+
+            if(atposition < 1 || dotposition < 1 || dotposition < atposition+2 ||  dotposition+2 >= a.length){
+                alert ("enter a valid email address")
+            }
+
+        }
+
+
+        
+        // function funName(){
+        //     var a = "";
+        //     a = document.getElementById("id1").value;
+
+        //     if(a.includes("@") == false){
+        //         alert("Please enter a valid email id")
+        //         return false
+        //     } else if(a.includes(".") == false){
+        //         alert("Please enter a valid email id")
+        //         return false
+        //     }
+        // }
+    </script>
+</body>
+</html>

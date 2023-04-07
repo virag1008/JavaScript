@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer{
+           width: 50%;
+           height: 400px;
+           margin: 0 auto;
+           background-color: coral;
+        }
+        #inner{
+           width: 50%;
+           height: 200px;
+           background-color:chartreuse;
+           margin: 50px auto 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <h2>outer</h2>
+
+        <div id="inner">
+            <h2>inner</h2>
+        </div>
+    </div>
+    <script>
+
+        // not useful - in this case the default values set is false...
+        // true case - if u click on inner div o/p is outer alert came first and followed by inner. 
+        //for understanding replace true by false 
+
+         document.getElementById("inner").addEventListener("click",function(){
+            alert("U click on Inner Div");
+         },true);
+
+         //..........................................
+
+         document.getElementById("outer").addEventListener("click",function(){
+            alert("U click on outer Div");
+         },false);
+
+         // we can replace getelementbyId by querySelector
+         
+    </script>
+</body>
+</html>

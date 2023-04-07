@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // why var self = this;  -- google kara..
+
+
+
+
+
+        // let channels = [
+        //     {
+        //         name: 'toi',
+        //         subscriber: 10000
+        //     },
+        //     {
+        //         name: 'amazon',
+        //         subscriber: 20000
+        //     },
+        //     {
+        //         name: 'netflix',
+        //         subscriber: 30000
+        //     }
+        // ]
+
+        // const vir = channels.filter(function (ch) {
+
+        //     return ch.subscriber > 20000
+
+        // })
+        // console.log(vir);
+
+
+
+        // for( var i = 0; i < channels.length ; i++){
+        //    var abc = channels[i].name
+        //   var w = abc.toString().split('');
+        //   document.write(w)
+        // }
+        // console.log(vir.name);
+
+
+        //********************************************
+
+        const characters = [{
+            'name': 'Tarak Mehta',
+            'height': '172',
+            'mass': '77',
+            'eyeColor' : 'brown',
+            'gender': 'male'
+        },
+        {
+            'name': 'Jethalal',
+            'height': '145',
+            'mass': '136',
+            'eyeColor': 'black',
+            'gender': 'male'
+        },
+        {
+            'name': 'Babita ji',
+            'height': '150',
+            'mass': '49',
+            'eyeColor': 'grey',
+            'gender': 'female'
+        }
+            ,
+        {
+            'name': 'Krishna Iyer',
+            'height': '168',
+            'mass': '84',
+            'eyeColor': 'black',
+            'gender': 'male'
+        }]
+
+         //console.log(characters);
+
+//Get an array of all names
+for( var i = 0; i < characters.length; i++){
+   var a = characters[i].name;
+   //console.log(a);
+};
+  
+
+// Get an array of Objects with name and height properties
+for( var i = 0; i < characters.length; i++){
+   var a = characters[i].name + " - " + characters[i].height;
+   //console.log(a);
+};
+
+
+//Get the total height of characters
+
+//     function funName(){
+//         for( var i = 0; i < characters.length; i++){
+//         if( i < characters.length )
+//            return characters[i].height
+//     }
+//     }
+//    console.log(funName());
+
+// for( var i = 0; i < characters.length; i++){
+//    var a =characters[i].height;
+//    //console.log(a);
+// };
+
+
+
+//Get characters with mass greather  than 100
+
+for( var i = 0; i < characters.length; i++){
+     if (characters[i].mass > 100 ){
+        console.log(characters[i].name)
+     }
+}
+
+
+// // var  x=characters.slice(0,1);
+//  var scb = characters[0].name + characters[0].height
+
+// console.log(scb)
+
+
+for( var i = 0; i < characters.length; i++){
+    var scb = characters[i]
+    delete scb.eyeColor + delete scb.gender + delete scb.mass;
+//console.log(scb);
+}
+
+
+//Get all male characters
+
+// for(var i = 0; i < characters.length; i++){
+//     if(characters[i].gender == 'male'){
+//        console.log(characters[i].name);
+//     }else{
+//         console.log("no male in family")
+//     }
+// }
+
+
+//Sort the gender
+
+
+
+//Sort by name
+
+// for(var i = 0; i < characters.length; i++ ){
+//     var abc = characters[i].name;
+//     var cde = abc.sort();
+//     console.log(cde);
+// }
+
+
+// Does every characters has mass more then 40?
+
+characters.parc
+
+function funName (xyz){
+    xyz.mass > 40;
+}
+var asd = characters.every(funName);
+console.log(asd)
+
+
+
+
+// Does every character has blue eye?
+
+
+
+//is there atlease one male characters // Array.some
+// is there at lease one character taller than 200?
+
+        //Write function for sum and multiplyBy2
+
+        // console.log(arr1.sum())
+        // console.log(arr1.multiplyBy2())
+
+    </script>
+</body>
+
+</html>

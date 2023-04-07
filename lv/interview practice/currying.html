@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function currying (a){
+            return function (b){
+                return function (c){
+                    return function (d,e){
+                        return a + b + c + d + e;
+                    }
+                }
+            }
+        }
+        // var s1 = currying(1)
+        // var s2 = s1(2)
+        // var s3 = s2(3)
+        // var s4 = s3(4,5)
+
+        // console.log(s4)
+
+
+        // var s1 = currying(1)(2)(3)(4,5)
+        // console.log(s1);
+
+        var s1 = currying(1)(2)(3)(4,5)
+        console.log(s1);
+         
+    </script>
+</body>
+</html>

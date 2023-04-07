@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+         //How to use instanceof operator to test whether the object refer to the corresponding class
+         // child class la karto ki parent class la
+
+        function vehicle (name) {
+            this.name = name;
+            throw new console.error(" You cannot create instance of abstract class.");
+        }
+        vehicle.prototype.display = function () {
+            return "vehicle is : " + this.name;
+        }
+
+        function Bike(name){
+            this.name= name
+        }
+        Bike.prototype = Object.create(vehicle.prototype)
+
+        var bikeee = new Bike("honda");
+        document.writeln(bikeee instanceof vehicle)
+        document.writeln(bikeee instanceof Bike)
+    </script>
+</body>
+
+</html>

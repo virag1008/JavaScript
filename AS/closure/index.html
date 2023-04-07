@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <script>
+      function x() {
+        let count = 100;
+        function y() {
+          console.log(count);
+        }
+        y();
+      }
+      x();
+    </script> -->
+
+    <!-- <script>
+      function x() {
+        let count = 100;
+        function y() {
+          console.log(count);
+        } 
+        count = 200;
+        return  y
+      }
+      var z = x();
+      // here x came out of call stack ythe x che kam zale...
+      // but aapn jevha z or y la invoked karu tevha  punha x call stack madhe yeun jate... 
+      console.log(z);
+      console.log(z());   // console madhe console o/p undefined
+      z()
+
+    </script> -->
+
+    <script>
+      console.log(console.log("hii"));
+    </script>
+
+
+    <script>
+      function z() {
+        function x() {
+          let count = 100;
+            function y() {
+               console.log(count);
+            }
+          y();
+        }
+        x();
+      }
+    z();
+    </script>
+
+  </body>
+</html>

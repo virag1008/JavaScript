@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+        // expected output -
+        //  Shubham Patil
+        //  S P
+        //  patil shubham
+
+      let Str = "shubham patil";
+
+      let F_letterCapiatl = Str.split("");
+
+      F_letterCapiatl.splice(0, 1, "S");
+      F_letterCapiatl.splice(8, 1, "P");
+
+      let toStr = F_letterCapiatl.join("").toString();
+
+      console.log(toStr);
+
+      //-----------------------------------------------------
+
+      let Srch_S = Str.match("s").toString().toUpperCase();
+
+      let Srch_P = Str.match("p").toString().toUpperCase();
+      console.log(Srch_S, Srch_P);
+
+      //------------------------------------------------------
+
+      let rev = Str.split(" ").reverse().join(" ");
+
+    //   console.log
+      console.log(rev);
+    </script>
+
+
+
+
+
+    <script>
+      let rep_s = Str.replace("s", "S");
+
+      let result = rep_s.replace("p", "P");
+
+      console.log(result);
+    </script>
+
+
+  </body>
+</html>

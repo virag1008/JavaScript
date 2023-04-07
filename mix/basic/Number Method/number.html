@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 5px 0 0 0px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Number method </h1>
+    <script>
+        var a = "98";
+        var num = Number(a);
+        document.write(num + 2 + "<br>");
+
+        document.write("if we not used Number coomand then it show like this: ")
+        document.write(a + 2 + "<hr>");
+
+
+        document.write("<h3> for boolean </h3>")
+        var boolean = true;
+        var b = Number(boolean);
+        document.write(b + "<br>");
+
+        var boolean_1 = false;
+        var b1 = Number(boolean_1);
+        document.write(b1 + "<hr>");
+
+        document.write("<h3> Not a number</h3>")
+        var a = "98 99";
+        var num = Number(a);
+        document.write(num + "<hr>");
+
+    </script>
+
+    <h1>ParseInt method </h1>
+    <script>
+        var a = "10 20 25";
+        document.write(parseInt(a) + "<br>");
+
+        var b = "10.33";
+        document.write(parseInt(b) + "<h3> takes the value only in integer</h3> <br>");
+
+        var b = " this is 10 yr old";
+        document.write(parseInt(b) + "<h3> takes the firstvalue only otherwise show NaN</h3> <br>");
+
+        var a = "000010 years xddcgf cdcfv ftcdfxc";
+        document.write(parseInt(a) + "<h3> takes the first value only other ignore</h3> <br>" + "<hr>");
+    </script>
+
+    <h1>parseFloat method </h1>
+    <p>same to same work like parseInt ...it just show float value</p>
+    <script>
+        var a = "10.33"
+        document.write(parseFloat(a) + "<br>");
+
+        var b = " this is 10 yr old";
+        document.write(parseFloat(b) + "<h3> takes the firstvalue only otherwise show NaN</h3> <hr>");
+    </script>
+
+    <h1 style="font-style:italic;">"is" ne start honare sarv method o/p true or false show kartat </h1>
+    <h1>isFinite method </h1>
+
+    <p>finite value - true // infinite - false</p>
+    <script>
+        var a = 10
+        document.write(Number.isFinite(a) + "<br>");
+        var a = -10.33
+        document.write(Number.isFinite(a) + "<br>");
+        var a = "hello"
+        document.write(Number.isFinite(a) + "<br>");
+        var a = "-10.33"
+        document.write(Number.isFinite(a) + "<hr>");
+    </script>
+
+    <h1>isInteger method </h1>
+    <p>Integer value - true // decimal - false</p>
+    <script>
+        var a = 10
+        document.write(Number.isInteger(a) + "<br>");
+        var a = -10.33
+        document.write(Number.isInteger(a) + "<br>");
+        var a = "hello"
+        document.write(Number.isInteger(a) + "<hr>");
+    </script>
+
+    <h1>toFixed method </h1>
+    <script>
+        var a = 10
+        document.write(a.toFixed(2) + "<br>");
+        var a = -10.37895
+        document.write(a.toFixed(3) + "<hr>");
+        var a = "10"
+        //document.write(a.toFixed(3) + "<hr>");
+        //he string aslya mule showch honar nahi
+    </script>
+
+<h1>toPrecision method </h1>
+<P>Jevdhe digits lihle tevdhech print hotat</P>
+<script>
+    var a = 10.4562
+    document.write(a.toPrecision(5) + "<br>");
+
+    var a = -10.37895
+    document.write(a.toPrecision(3) + "<br>");
+
+    var a = 10009
+    document.write(a.toPrecision(8)+ "<br>");
+    
+    var a = 10.123
+    document.write(a.toPrecision(10) + "<hr>");
+    
+   
+</script>
+
+<script>
+    document.write(parseFloat("55.5 hello")+ "<br>");
+    document.write(parseInt("55.5 hi") + "<hr>");
+
+    document.write(parseFloat("hello")+ "<br>");
+    document.write(parseInt("hello") + "<hr>");
+</script>
+</body>
+
+</html>

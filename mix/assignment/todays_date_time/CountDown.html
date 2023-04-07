@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-image: url(/assignment/todays_date_time/pic1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+        #demo {
+            font-size: 50px;
+            line-height: 100px;
+            height: 100px;
+            width: 670px;
+            background-color: lightblue;
+            box-shadow: 2px 3px 5px greenyellow;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        h1{
+            color: rgb(61, 9, 9);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h1> COUNTDOWN BEGINS </h1>
+        <p id="demo"></p>
+    </div>
+
+    <script>
+        var diwali = new Date("Octomber 23, 2022 00:00:00").getTime();
+
+        // get time work karte ki jan 1,1970 pasun given date parynant kiti miliseconds zale te calculate karun dete.
+
+        var abc = setInterval(function () {
+
+            var today = new Date().getTime();
+
+            var diff = diwali - today;
+            console.log(diff)
+            // this time arrives in miliseconds.
+
+            var days = Math.floor(diff / (1000 * 24 * 60 * 60))
+            console.log(days)
+
+            const hrs = Math.floor(diff % (1000 * 24 * 60 * 60) / (60 * 60 * 1000))
+            console.log(hrs)
+
+            const min = Math.floor(diff % (1000 * 60 * 60) / (60 * 1000))
+            console.log(min)
+
+            const sec = Math.floor(diff % (1000 * 60) / (1000))
+            console.log(sec)
+
+            document.getElementById("demo").innerHTML = days + " Days - " + hrs + " Hrs- " + min + " min-"  + sec + " sec" 
+        } , 1000)
+
+    </script>
+</body>
+</html>

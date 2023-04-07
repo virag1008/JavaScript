@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const obj1 = {
+            name: "virag",
+            id: 100
+        }
+        console.log(obj1.name);
+
+        const { name: myName, id: mId } = obj1;
+        console.log(myName);
+        console.log(mId);
+    </script>
+
+    <script>
+        var abc = [1,2,3,4,5];
+        var [a,b, ...rest ] = abc;
+
+        console.log(a);
+        console.log(b);
+        console.log(rest);
+    </script>
+
+    <script>
+        const [v = 1] = [];
+        const { w = 2 } = {};
+        const { c = 3 } = { c: undefined };
+        const { d = 4 } = { d: null };
+
+        console.log(v); // 1
+        console.log(w); // 2    
+        console.log(b); // 3    
+        console.log(d); // null    
+
+    </script>
+
+    <script>
+        const arr = ['one', 'two', 'three'];
+
+        const [red, yellow, green] = arr;
+
+        console.log(red);    // "one"
+        console.log(yellow); // "two"
+        console.log(green);  // "three"
+    </script>
+</body>
+
+</html>

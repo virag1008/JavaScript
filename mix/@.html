@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- ************************************************** -->
+    <script>
+      // let arr1 = [1,2,3,4,5,6];
+      // let newarr = arr1.reduce((pre,next) => pre - next)
+      // console.log(newarr);
+
+      // let arrob = [0, { value : 1},{value : 2},{value : 3}];
+      // let reducearr = arrob.reduce( (pre,next) => {
+      //     // return
+
+      //     return pre + parseInt(next.value)
+
+      // })
+      // console.log(reducearr);
+
+      // var ab = [10,20,30]
+      // var a =
+
+      // const a = Object.assign({c:3},ab)
+      // console.log(a);
+
+      // console.log(typeof a)
+
+      // var obj = {
+      //     a:1,
+      //     b:2
+      // }
+
+      // var c= Object.assign({c:3},obj)
+      // console.log(c)
+
+      // obj.name = "vir";
+      // console.log(obj)
+    </script>
+
+    <!--*************** CALL APPLY BIND METHOD************* -->
+    <!-- <script>
+
+        function emp (id,name){
+            return this.id + " " + this.name
+        }
+
+        var obj = {
+            id:101,
+            name:'virag',
+            batch:'MERN',
+            city:'pune'
+        }
+        var obj2 = {
+            id:102,
+            name:'shubh',
+            batch:'MERN',
+            city:'pune'
+        }
+
+        var ap = emp.call(obj);
+        console.log(ap);
+        var ap2 = emp.call(obj2);
+        console.log(ap2);
+    </script> -->
+    <!-- ************************************************** -->
+    <!-- <script>
+      function fun() {
+        return this.name + " " + this.city;
+      }
+
+      var obj = {
+        id: 101,
+        name: "virag",
+        batch: "MERN",
+        city: "pune",
+      };
+
+      var abc = fun.call(obj);
+      console.log(abc);
+    </script> -->
+
+    <!-- ************************************************** -->
+
+    <!-- <script>
+      function fun(pincode) {
+        return this.name + " " + this.city + " " + pincode;
+      }
+
+      var obj = {
+        id: 101,
+        name: "virag",
+        batch: "MERN",
+        city: "dhule",
+      };
+
+      var abc = fun.apply(obj, [424001]);
+      console.log(abc);
+      // apply method is used when function have parameters other than objects..
+    </script> -->
+
+    <!-- ************************************************** -->
+
+    <!-- <script>
+      let arr = [5, 8, 9, 1, 7, 36, 7];
+      for (i = 0; i < arr.length; i++) {
+        for (j = 0; j < arr.length - 1; j++) {
+          if (arr[i] < arr[j]) {
+            var abc = arr[i];
+            arr[i] = arr[j];
+            arr[j] = abc;
+          }
+        }
+      }
+      console.log(arr);
+    </script> -->
+
+    <!-- ************************************************** -->
+
+    <!-- <script>
+      // que. find the name of doctor having maximum age ?
+
+      data = [
+        {
+          name: "Joe",
+          age: 30,
+          profession: "Doctor",
+        },
+        {
+          name: "Doe",
+          age: 60,
+          profession: "Engineer",
+        },
+        {
+          name: "Amit",
+          age: 90,
+          profession: "Doctor",
+        },
+        {
+          name: "zagade",
+          age: 90,
+          profession: "Doctor",
+        },
+        {
+          name: "Shayam",
+          age: 20,
+          profession: "Clerk",
+        },
+      ];
+
+      // const abc = data
+      //   .filter((para) => {
+      //     return para.profession === "Doctor";
+      //   })
+      //   .map((item) => item.age);
+
+      // let maxAge = Math.max(...abc);
+      // let maxAge = Math.max.apply(this, abc);
+
+      const a = data.filter((it) => it.profession === "Doctor");
+      let maxAge = Math.max(...a.map((it) => it.age));
+
+      let result = data
+        .filter((pub) => {
+          return pub.age === maxAge && pub.profession === "Doctor";
+        })
+        .map((person) => person.name);
+
+      console.log(result);
+
+    </script> -->
+
+    <!-- ************************************************** -->
+
+    <!-- <script>
+      let counter = 0;
+
+      function add() {
+        console.log(counter++);
+      }
+
+      add();
+      add();
+      add();
+    </script> -->
+
+    <!-- ************************************************** -->
+
+    <!-- <script>
+      let arr = [1, 3, 5, 6, 8, 2, 7, 4, 12];
+      let c = [];
+      let number = 12;
+
+      function myfunc(a, b) {
+        for (let i = 0; i < a.length; i++) {
+          for (let j = i + 1; j < a.length; j++) {
+            if (arr[i] * arr[j] == b) {
+              c.push([arr[i], arr[j]]);
+            }
+          }
+        }
+      }
+      myfunc(arr, number);
+      console.log(c);
+    </script> -->
+
+    <!-- ************************************************** -->
+    <!-- <script>
+      function createIncrement() {
+        let count = 0;
+
+        function increment() {
+          count++;
+        }
+
+        let message = `Count is ${count}`;
+
+        function log() {
+          console.log(message);
+        }
+
+        return [increment, log];
+      }
+
+      const [increment, log] = createIncrement();
+
+      increment();
+      increment();
+      increment();
+      log();
+      log();
+
+      // output always return zero bcoz function increment is inner function
+      // we cant acess its value outside its function scope.
+
+    </script> -->
+
+    <!-- ************************************************** -->
+
+    <!-- <script>
+      function createStack() {
+        return {
+          items: [],
+          push(item) {
+            this.items.push(item);
+          },
+          pop() {
+            return this.items.pop();
+          },
+        };
+      }
+      const stack = createStack();
+      stack.push(10);
+      stack.push(5);
+      stack.pop(); // => 5
+      console.log(stack.items); // => [10]
+      console.log((stack.items = [10, 100, 1000])); // Encapsulation broken!
+    </script> -->
+
+    <!-- ************************************************** -->
+  </body>
+</html>

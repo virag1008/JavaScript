@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Test{
+            constructor(){
+                document.write(Test.abc1());
+                document.write(this.constructor.abc1())  // for this method call it required object so we create object on last line.
+            }
+            static abc1(){
+                return "A static method with constructor is called <br>"
+            }
+        }
+        document.write(Test.abc1())
+
+        var v = new Test();
+        
+    </script>
+</body>
+</html>

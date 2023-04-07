@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onresize="resizeFunction()">
+    <p>Check in console</p>
+
+    <script>
+        function resizeFunction(){
+            console.clear();
+
+        var innerHT= window.innerHeight;
+        console.log("Inner Height : " + innerHT);
+
+        var outerHT= window.outerHeight;
+        console.log("outer Height : " + outerHT);
+
+        var innerWD= window.innerWidth;
+        console.log("Inner Height : " + innerWD);
+
+        var outerWD= window.outerWidth;
+        console.log("outer Height : " + outerWD);
+        }
+    </script>
+</body>
+</html>

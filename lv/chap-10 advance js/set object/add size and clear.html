@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var s = new Set();
+
+        s.add("HTML");
+        s.add("CSS");
+        s.add("JAVASCRIPT");
+        s.add("CSS");    // DUPLICATION IS NOT ALLOW IN SET OBJECT so this will not print ..
+
+        for (value of s) {
+            document.write(value + "<br>")
+        }
+
+        document.write("size of the set before clear :- " + s.size + "<br>")
+
+        s.clear();
+        document.write("size of the set after clear :- " + s.size)
+    </script>
+</body>
+
+</html>

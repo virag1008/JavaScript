@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      ////////////////////////////////////////////////////////////
+      //   //   convert json string into object
+
+      //   const info = '{ "name": "virag", "id":"101" }';
+      //   const obj = JSON.parse(info);
+      //   console.log(obj);
+      //   console.log(obj.id);
+
+      //   //   convert json into array
+
+      //   const marks = "[10,11,2,20,28]";
+      //   const arr = JSON.parse(marks);
+      //   console.log(arr);
+      //   console.log(arr[1]);
+
+      //////////////////////////////////////////////////////////////////
+      //   // convert json into Date
+
+      //   const new_info = '{ "name": "virag", "id":"101", "DOB":"2022/11/24" }';
+      //   const obj2 = JSON.parse(new_info);
+      //   var convert_date = new Date(obj2.DOB);
+      //   console.log(obj2);
+      //   console.log(obj2.name, convert_date);
+
+      //////////////////////////////////////////////////////////////////
+
+      // eval function
+
+      //   const data = '{ "id":"201", "fun": "function(){return 101 }" }';
+      //   const obj3 = JSON.parse(data);
+
+      //   const ev = eval("(" + obj3.fun + ")");
+      //   // const ev = eval("("+ obj3.fun +")");
+      //   console.log(ev());
+
+      //////////////////////////////////////////////////////////////
+
+      // reviver function ...
+
+      //   const let_info = '{ "name": "virag", "id":"101", "DOB":"2022/11/24" }';
+
+      //   const obj4 = JSON.parse(let_info, function (key, value) {
+      //     // if(key == 'id'){
+      //     //     return parseInt(value)
+      //     // }
+      //     // if(key == 'DOB'){
+      //     //     return new Date(value);
+      //     // }
+      //     // if(key == 'name'){
+      //     //     return value = 'shubh';
+      //     // }
+      //     // else{
+      //     //     return value
+      //     // }
+
+      //     var abc = key == "name" ? (value = "shubh") : value;
+      //     var abc2 = key == "id" ? parseInt(value) : value;
+      //     var abc3 = key == "DOB" ? new Date(value) : value;
+      //     return abc, abc2, abc3;
+      //   });
+      //   console.log(obj4);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        function Details() {
+            this.name = "virag",
+                this.id = "100";
+        }
+
+        var obj = new Details();
+
+        console.log(obj.name);
+        console.log(obj.id);
+
+        obj.nationality = 'indian';
+        console.log(obj.nationality);
+    </script> -->
+
+    <script>
+        function Details(x,y) {
+            this.name = x,
+                this.id = y;
+        }
+
+        var obj = new Details('virag',100);
+        var obj_2 = new Details('shubh',200);
+
+        console.log(obj.name);
+        console.log(obj.id);
+
+        for(value in obj){
+            console.log(obj[value])
+        }
+        for(value in obj_2){
+            console.log(obj[value])
+        }
+
+    </script>
+</body>
+
+</html>

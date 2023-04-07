@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        // PROTOTYPE CHAINING..........................
+        const obj = {
+            city: 'dhule',
+            greet() {
+                console.log(`Greeting from ${this.city}`)
+            }
+        }
+        console.log(obj.city);
+        obj.greet();
+    </script> -->
+
+
+    <!-- <script>
+        const myDate = new Date(1995, 11, 21);
+        // const myDate = new Date("12/21/1995");
+
+        console.log(myDate.getFullYear()); // 95
+
+        myDate.getFullYear = function () {
+            console.log("something else!");
+       
+
+        myDate.getFullYear(); // 'something else!'
+    </script> -->
+
+
+    <!-- PROTOTYPE CHAINING -->
+    <!-- <script>
+
+        let object = new Date(1995);
+
+        do {
+            object = Object.getPrototypeOf(object);
+            console.log(object);
+        } while (object)
+    </script> -->
+
+
+    <!-- <script>
+        let num_1 = 50;
+
+        let num_2 = num_1;
+
+        console.log(num_1);
+        console.log(num_2);
+
+        num_2 = 51;
+        console.log(num_2);
+        console.log(num_1);
+
+
+        let ref_1 = [2,3,4,5];
+        let ref_2 = ref_1;
+
+        console.log(ref_1);
+        console.log(ref_2);
+
+        // ref_2.push(6);
+        ref_2 = [1,5,7]
+
+        console.log(ref_1);
+        console.log(ref_2);
+    </script> -->
+
+
+    <script>
+        setTimeout( (num=9) => {
+            console.log(num)
+        } ,2000)
+
+    </script>
+
+</body>
+
+</html>

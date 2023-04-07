@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // when property name of object and value stored in variable are same then we can use directly that values.
+
+        var name = "virag";
+        var lName = "jain";
+
+        // var obj1 = {
+        //     name: name,
+        //     lName: lName
+        // }
+
+        var obj1 = {
+            name,
+            lName
+        }
+        console.log(obj1);
+    </script>
+
+
+    <script>
+        var abc = "name";
+
+        // when we need to replace property name by inbuilt variable value then we use varible key in square bracket[] 
+        var obj2 = {
+
+            [ "first" + abc]:"virag",
+
+            lName:"'jain'",
+
+            // hi method outdated zali aata saral method-name lihtat wihout function word.
+
+            // method:function(){
+            //     return `"${this.firstname}" having surname ${this.lName}`
+            // }
+
+            'method vj'(){
+                return `"${this.firstname}" having surname ${this.lName}`
+            }
+
+        }
+        console.log(obj2)
+        //console.log(obj2.method())
+        // ya method madhe navat spacing add karta yet nhavati.
+
+        // other method to call
+
+        console.log(obj2['method vj']())
+        // dot na deta square braces deun quotes madhe method name ...quotes is mandetory.
+        //we can add space in names.
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Student(name,marks){
+            var fName = name;
+            var Fmarks = marks;
+
+            Object.defineProperty(this,"name",{
+                get : function(){
+                    return fName
+                },
+                set : function(fName){
+                    this.fName = fName
+                }
+            })
+
+            Object.defineProperty(this,"marks",{
+                get : function(){
+                    return Fmarks
+                },
+                set : function(Fmarks){
+                    this.Fmarks = Fmarks
+                }
+            })
+        }
+
+        var stud = new Student("virag",90);
+        document.write(stud.name + " has secured " + stud.marks + " marks.")
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //  js hoisting.............
+        //Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope.
+        //always declare all variables at the beginning of every scope...aadhi use kela variable aani nantr declare kela var a=10 tr te *undefined* o/p yete.
+
+        var virag = 600;
+        function print() {
+
+            console.log(virag)
+            var virag = 700;
+            console.log(virag)
+        }
+        print();
+
+
+
+        // let virag=600;
+        // function print(){
+        //     console.log(virag)
+        //     let virag=700;
+        //     console.log(virag)
+        // }
+        // print();
+
+        //let global ghetla aani parat function scope madhe redeclare kela tari chalto . ..but function scope madhech redeclare nahi karu shakat
+        //function purn pane vegale kam karte
+
+
+    </script>
+    <script>
+
+        var virag = 600;
+        function print() {
+            console.log(virag)
+            virag = 700
+            console.log(virag)
+        }
+        print();
+
+
+
+        function funName() {
+            for (i = 0; i <= 10; i++) {
+                console.log(i);
+            }
+        }
+        funName();
+
+
+
+
+        function print() {
+            var a;
+            for (let i = 1; i <= 10; i++) {
+                a += i;
+                return a
+            }
+        }
+        console.log(print());
+
+
+
+        // PROGRAM FOR PRIME NUMBER...
+
+        // for(i=10;i<=100;i++){
+        //    if (i % 2 != 0 ){
+        //     if (i % 3 != 0 ){
+        //       if (i % 5 != 0 ){
+        //         if (i % 7 != 0 ){
+        //       console.log(i + "<br>")
+        //         }
+        //       }
+        //     }
+        //    }
+        // }
+
+
+
+
+        for (var vir = 0; vir < 25; vir++) {
+
+            var notPrime = false
+            for (a = 2; a <= vir; a++) {
+                if (vir % a === 0 && a !== vir) {
+                    notPrime = true;
+                }
+            }
+            if (notPrime == false) {
+                console.log(vir)
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

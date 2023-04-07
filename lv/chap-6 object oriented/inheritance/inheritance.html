@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class companyName{
+            constructor(){
+                this.companyName = "honda"
+            }
+        }
+        class bike extends companyName{
+            constructor(name,prize){
+                super();
+                this.name = name;
+                this.prize = prize;
+            }
+        }
+        var v1 = new bike("shine",70000);
+        document.write(" Bike name- "+v1.name+"<br>")
+        document.write(" Bike prize-"+v1.prize+"<br>")
+        document.write(" Bike company- "+v1.companyName+"<br>")
+
+        var v2 = new bike("unicorn",85000);
+        document.write(" Bike name- "+v2.name+"<br>")
+        document.write(" Bike prize-"+v2.prize+"<br>")
+        document.write(" Bike company- "+v2.companyName+"<br>")
+    </script>
+</body>
+</html>

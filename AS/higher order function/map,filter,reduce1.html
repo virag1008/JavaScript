@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const user = [
+            { firstname : "viru", lastname: "jain", age:25},
+            { firstname : "shubh", lastname: "patil", age:24},
+            { firstname: "shanky",lastname: "padwal", age:25},
+            { firstname:"shubh", lastname: "deshmukh", age:26}
+        ]
+
+        const fullname = user.map( (x) => x.firstname +" "+x.lastname)
+        console.log(fullname)
+
+        // Find  HOW MANY PEOPLE HAVE SAME AGE;
+
+        const find = user.reduce( (x,y) => {
+            if(x[ y.age ]){
+                x[ y.age ] = ++x[ y.age ]
+            }else{
+                x[ y.age ] = 1;
+            }
+            return x
+        }, {});
+        console.log(find)
+
+        // Find  HOW MANY PEOPLE HAVE AGE LESS THAN 26...print their first name;
+    
+        const young = user.filter( (x) => x.age < 26).map( (x) => x.firstname)
+        console.log(young)
+        
+    </script>
+</body>
+</html>

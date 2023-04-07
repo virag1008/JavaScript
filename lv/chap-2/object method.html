@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function emplo (id, name, salary){
+            this.id = id;
+            this.name = name;
+            this.salary = salary;
+
+            this.updatedSallary = updatedSallary;
+            function updatedSallary (latestSalary){
+                this.salary = latestSalary;
+            }
+        }
+
+        var vir = new emplo(1, "shyam", 20000);
+
+        document.writeln(vir.id + " "  + vir.name + " " + vir.salary + "<br>");
+
+        vir.updatedSallary(40000);
+        document.writeln(vir.id + " "  + vir.name + " " + vir.salary);
+    </script>
+</body>
+</html>

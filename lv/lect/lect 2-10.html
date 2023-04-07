@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var abc = {
+        //     name:'virag',
+        //     id:'123'
+        // }
+        // var bcd = {
+        //     gender:'male',
+        //     _proto_ : 'abc'  // prtotype ???  // _proto_ = show link
+        //class have prototype instance have _proto_
+        // }
+
+        // document.write(bcd.gender + "<br>");
+        // document.write(bcd.id + "<br>");
+        // document.write(abc.gender);
+
+
+
+
+
+        var abc = {
+            name:'virag',
+            id:'123'
+        }
+
+        abc.name = "jain";
+
+        Object.freeze(abc)
+        //using clonedeep
+        Object.seal(abc)
+        Object.freeze(abc)
+        console.log(abc)
+        
+
+    </script>
+</body>
+</html>

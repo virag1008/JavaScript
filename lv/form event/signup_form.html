@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body align="center">
+    <h2> SIGN UP FORM </h2>
+
+    <table align="center" cellspacing="10" cellpadding="8" border="0">
+        <tr>
+            <td> name </td>
+            <td> <input type="text" placeholder="enter your name" id="name"> </td>
+        </tr>
+
+        <tr>
+            <td> Email </td>
+            <td> <input type="email" placeholder="enter your Email" id="email"> </td>
+        </tr>
+
+        <tr>
+            <td> password </td>
+            <td> <input type="password" placeholder="enter your password" id="password"> </td>
+        </tr>
+
+        <tr>
+            <td> password </td>
+            <td> <input type="password" placeholder="confirm your password" id="cnfpassword"> </td>
+        </tr>
+
+        <tr>
+            <td> <input type="submit" value="create" onclick="create()"></td>
+        </tr>
+    </table>
+
+    <script>
+
+        function create(){
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var cnfpassword = document.getElementById("cnfpassword").value;
+
+            var letters = /^[A-Za-z]+$/
+
+            var emailvalidate =  /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
+
+            if(name == "" || email == "" || password == "" || cnfpassword == "" ){
+                alert("enter all details")
+            }
+            else if( !letters.test(name)){
+                alert("enter a valid name that does not contain numbers")
+            }
+            
+            // else if( !emailvalidate.test(password) ){
+            //     alert("enter valid email id")
+            // }
+
+            else if(password != cnfpassword ){
+                alert("password not match")
+            }
+            else if(document.getElementById("password").value.length > 12 ){
+                alert("password should not grether than 12 characters.")
+            }
+            else if(document.getElementById("password").value.length < 4 ){
+                alert("password should not less than 4 characters.")
+            }else{
+                alert("your form submitted successfully.")
+            }
+         }
+
+    </script>
+</body>
+</html>

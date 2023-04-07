@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const cart = ["earbuds", "mobiles", "laptop"];
+
+      api.createOrder(cart, function () {
+        api.proceedToPayment(function () {
+          api.showOrderSummary(function () {
+            api.UpdateWallet();
+          });
+        });
+      });
+
+      // Order dilya nantrch payment kade jata yeil tya aadhi nahi
+      // after payment order summary disayla pahije..
+      // after that wallet will be update...
+      // so we need asynchronous code... so we used callback function.
+
+      // api is depend on one after the other  ... and cod ebecome unreadable and unmaintainable
+
+      // tohis structure is also known as pyramid of doom
+
+      // LOOSE OUR CONTROL OVER CALLBACKS  are known as inversion of control problem of callback.
+
+      // eka function madhe dusra fuction takla tr inner function var control outer function cha asto so there may be chance of payment api run twice or it will not run etc..
+    </script>
+  </body>
+</html>

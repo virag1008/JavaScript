@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="funName_1()"> OPEN WINDOW </button>
+    <button onclick="funName_2()"> CLOSE WINDOW </button>
+
+    <script>
+
+        var virag;
+        function funName_1(){
+            //window.open();
+            // for blank image
+            virag = window.open("https://www.w3schools.com/","","width=500px,height=300px,left=400px,top=170px")
+        }
+        function funName_2(){
+            virag.window.close();
+        }
+    </script>
+</body>
+</html>

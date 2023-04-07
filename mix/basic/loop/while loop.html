@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = 1;
+
+        while (a <= 10) {
+            document.write(a + ") india is developing <br>");
+            a = a + 1
+        }
+    </script>
+
+
+    <hr>
+
+    <script>
+        var a = 1;
+        document.write("<ul>")
+        while (a <= 10) {
+            document.write("<li> india is developing <br></li>");
+            a = a + 1
+        }
+        document.write("</ul>")
+    </script>
+
+    <hr>
+
+    <script>
+        var a = 10;
+        document.write("<ul>")
+        while (a >= 1) {
+            document.write("<li>" + a + ")  india is developing <br></li>");
+            a = a - 1
+        }
+        document.write("</ul>")
+
+
+//*****************************************************
+        function multiply(a, b) {
+            return a * b
+        }
+
+        function sum(a, b) {
+            return a + b
+        }
+
+        function substract(a, b) {
+            return a - b
+        }
+
+        function division(a, b) {
+            return a / b
+        }
+
+        function calculator(a, b, operator) {
+            return operator(a, b)
+        }
+
+
+        console.log(calculator(10, 6, multiply));
+        console.log((calculator(15, 9, sum)));
+        console.log((calculator(10, 5, division)));
+        console.log((calculator(10, 6, substract)));
+    </script>
+
+</body>
+
+</html>

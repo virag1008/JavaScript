@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var wm = new WeakMap();
+
+        var obj1 = {};
+        var obj2 = {};
+        var obj3 = {};
+
+        wm.set(obj1,"HTML");
+        wm.set(obj2,"CSS");
+        wm.set(obj3,"JavaScript");
+
+        document.write(wm.get(obj2) + "<br>");
+        document.write(wm.get(obj1) + "<br>");
+        document.write(wm.get(obj3) + "<br>");
+        // document.write(wm.get(obj4) + "<br>"); // o/p-error
+
+        // foreach method ithe usehot nahi.
+
+        // wm.forEach( value => {
+        //     document.write(value)
+        // });
+
+
+        // has method
+
+        document.write("check 'html' is present or not:- " + wm.has("obj1")+"<br>");
+        document.write("check html is present or not:- " + wm.has(obj1)+"<br>");
+        // document.write("check obj35 is present or not:- " + wm.has(obj35)+"<br>")
+        // show error..
+
+
+        //delete method.
+        wm.delete(obj1);
+        document.write("<br> after delete  obj1 "+"<br>");
+        document.write("check 'html' is present or not:- " + wm.has("obj1")+"<br>");
+    </script>
+</body>
+</html>

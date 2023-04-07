@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // convert object into json string
+
+        const obj = { name: "virag", id:"101" }
+        document.write(obj + "<br>")
+
+        const  info = JSON.stringify(obj);
+        console.log(info);
+        document.write(info)
+        // keys la sudhha quotes aale...
+
+        // convert array into json string..
+
+        const arr = [2,'4','hii',3];
+        const nbv = JSON.stringify(arr);
+        console.log(nbv);
+
+        
+        // convert date into json string..
+
+        const dateobj = {
+            name:'shubh',
+            today_date: new Date()
+        };
+        const jsondate = JSON.stringify(dateobj);
+        console.log(jsondate)
+
+        
+        // JSON.stringify (object ,replacer , space);
+
+        const check = {
+            name:'shubh',
+            id: 101
+        };
+        const vj = JSON.stringify(check ,null ,10 );
+        console.log(vj);
+
+
+        const replacer = {
+            name:'shubh',
+            id: 101
+        };
+        const capitalName = JSON.stringify(replacer,function(key,value){
+            if(key == 'name'){
+                return value.toUpperCase()
+            }else{
+                return value
+            }
+        } ,10 );
+        console.log(capitalName);
+    </script>
+</body>
+</html>

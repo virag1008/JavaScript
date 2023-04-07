@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+  // concat method
+
+  var vir = ["name","school","address"];
+  var arr2 = ["college",10]
+  var virLatest = vir.concat(arr2)
+  console.log(virLatest);
+
+  // join
+
+  var vir=["name","school","address"];
+  var join = vir.join(" ");
+  console.log(join);
+
+  // sort
+
+  var vir=["name","school","address"];
+  var newarr = vir.sort();
+  console.log(newarr);
+
+  // reverse
+
+  var vir=["name","school","address"];
+  var newarr = vir.reverse();
+  console.log(newarr);
+
+  // pop
+
+  var vir=["name","school","address"];
+  vir.pop();
+  console.log(vir);
+
+   // push
+
+   var vir=["name","school","address"];
+  vir.push("rollCall");
+  console.log(vir);
+  
+   // shift
+
+   var vir=["name","school","address"];
+  vir.shift("rollCall");
+  console.log(vir);
+
+  
+   // unshift
+
+   var vir=["name","school","address"];
+  vir.unshift("rollCall");
+  console.log(vir);
+
+    // slice
+
+    var vir=["name","school","address","clg"];
+  var newarr = vir.slice(1,3);
+  console.log(newarr);
+
+    // splice
+
+  var vir = ["name", "school", "address"];
+  vir.splice(2, 0, "one","two");
+  console.log(vir);
+
+    // isArray
+
+  var vir = ["name", "school", "address"];
+  console.log( Array.isArray(vir) );
+
+    // index of
+
+  var vir = ["name", "school", "address"];
+  var a = vir.indexOf("school")
+  console.log(a);
+
+    //lastindex of
+
+    var vir = ["name", "school","cnc", "address"];
+  var a = vir.lastIndexOf("school")
+  console.log(a);
+
+    //tostring
+
+    var vir = ["name", "school","cnc", "address"];
+  var a = vir.toString()
+  console.log(a);
+
+    // fill
+
+    var vir = ["name", "school","cnc", "address"];
+  var a = vir.fill("fill",1,3)
+  console.log(a);
+
+    // entries 
+
+    var vir=["name","school","address"];
+    var newarr = vir.entries();
+    console.log(newarr);
+  for ( val of newarr) {
+  console.log(val)
+  }
+  console.log(newarr[1]);
+
+
+    // METHOD PERFORM ONLY ON NUMBER ARRAY
+
+    // some
+
+    var vir = [10,20,30,40];
+  var a = vir.some( (xyz) => xyz > 18)
+  console.log(a);
+
+
+    // every
+
+    var vir = [11,20,30,40];
+  var a = vir.every( (xyz) => xyz > 18 )
+  console.log(a);
+  var a = vir.every( (xyz) => xyz > 10 )
+  console.log(a);
+
+    // find
+
+    var vir = [11,20,30,40];
+  var a = vir.find( (xyz) => xyz > 18 )
+  console.log(a);
+
+   // find index
+
+   var vir = [11,20,30,40];
+  var a = vir.findIndex( (xyz) => xyz > 18 )
+  console.log(a);
+
+   // filter
+
+   var vir = [10,20,30,40];
+  var a = vir.filter( (xyz) => xyz > 18 )
+  console.log(a);
+  
+   // for eACH
+
+   var vir = [10,20,30,40];
+  vir.forEach(element => {
+  console.log(element);
+  });
+
+   // MAP
+
+   var vir = [10,20,30,40];
+  vir.map(element => {
+  console.log(element*10);
+  });
+  
+  </script>
+  
+</body>
+</html>
+
+
+

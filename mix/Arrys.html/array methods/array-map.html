@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>array map</h2>
+    <script>
+        //map multiply karnya sathi use hoto
+        var a=[10,20,30,45]
+        document.write(a +"<br>")
+
+        var b = a.map(Multiply);
+        document.write(b);
+
+        function Multiply(xyz){
+            return xyz + 10;
+        }
+    </script>
+
+    <h2>object map</h2>
+
+    <script>
+        //map print karnya sathi use hoto 
+        var a=[
+            {fname:"virag", age:25},
+            {fname:"shankar", age:27},
+            {fname:"shubhs", age:24}
+        ];
+        document.write(a +"<br>")
+
+        var b = a.map(printo);
+        document.write(b);
+
+        function printo(z){
+            return z.fname + " " + z.age ;
+        };
+
+    </script>
+</body>
+</html>

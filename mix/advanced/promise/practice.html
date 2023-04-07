@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function funName(param) {
+        //     return new Promise( (resolve , reject) =>{
+        //         console.log(" pls wait... fetching your data from api ")
+        //         setTimeout(() => {
+        //             if (param ) {
+        //             resolve (" i m successful ")
+        //         } else {
+        //             reject (" i m failed ")
+        //         }
+        //         }, 3000);
+        //     } );
+        // };
+
+        // console.log(funName(false));
+
+        // funName(true).then( (result) => console.log( result)).catch ( (error) => console.log( error ));
+
+
+//***********************************************************
+
+
+        //  function division(a,b) {
+        //     return new Promise( (resolve , reject) =>{
+        //         let c = a / b;
+        //         setTimeout(() => {
+        //             if (a,b) {
+        //             resolve (`divided value- ${c}`)
+        //         } else {
+        //             reject (`enter a valid number`)
+        //         }
+        //         }, 1000);
+        //     } );
+        // };
+
+        // division(5,2).then( (result) => console.log( result)).catch ( (error) => console.log( error ));
+        
+
+//************************************************************
+
+
+        // let p1 = new Promise( (resolve, reject) => {
+        //     setTimeout(() => {
+        //         console.log(`this is first promise`)
+        //         resolve( 10 )
+        //     }, 1 * 1000);
+        // } );
+
+        // let p2 = new Promise( (resolve, reject) => {
+        //     setTimeout(() => {
+        //         console.log(`this is second promise`)
+        //         resolve( 20 )
+        //     }, 2 * 1000);
+        // } );
+
+        // let p3 = new Promise( (resolve, reject) => {
+        //     setTimeout(() => {
+        //         console.log(`this is third promise`)
+        //         resolve( 30 )
+        //     }, 3 * 1000);
+        // } );
+
+        // Promise.all([ p1, p2, p3 ]).then( (result) => {
+        //     console.log(`hi ${result}`)
+        // }
+        // ).catch( (error) => {
+        //     console.log(`bye ${error}`)
+        // })
+
+// ***********************************************************
+
+
+    // let p1 = new Promise( (resolve, reject) => {
+    //         setTimeout(() => {
+    //             console.log(`this is first promise`)
+    //             resolve( 10 )
+    //         }, 1 * 1000);
+    //     } );
+
+    //     let p2 = new Promise( (resolve, reject) => {
+    //         setTimeout(() => {
+    //             console.log(`this is second promise`)
+    //             resolve( 20 )
+    //         }, 2 * 1000);
+    //     } );
+
+    //     let p3 = new Promise( (resolve, reject) => {
+    //         setTimeout(() => {
+    //             console.log(`this is third promise`)
+    //             resolve( 30 )
+    //         }, 3 * 1000);
+    //     } );
+
+    //     let total = 0;
+    //     Promise.all([ p1, p2, p3 ]).then( (result) => {
+    //         for ( let value in result){ total += result[value]}
+
+    //         console.log(`result: ${result}`)
+    //         console.log(`total: ${total}`)
+    //     }).catch( (error) => {
+    //         console.log(`error: ${error}`)
+    //     })
+
+//**********************************************************
+
+        var prom = function(returndata , msg){
+           return function (resolve, reject) {
+            setTimeout(() => {
+                console.log(`this is ${msg} promise`)
+                resolve( returndata )
+            }, returndata * 100 );
+        } }
+
+        let p1 = new Promise(prom(10,"first"))
+        let p2 = new Promise(prom(20,"second"))
+        let p3 = new Promise(prom(30,"third"))
+
+        let total = 0;
+        Promise.all([ p1, p2, p3 ]).then( (result) => {
+            for ( let value in result){ total += result[value]}
+
+            console.log(`result: ${result}`)
+            console.log(`total: ${total}`)
+        }).catch( (error) => {
+            console.log(`error: ${error}`)
+        })
+
+//*******************************************************
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

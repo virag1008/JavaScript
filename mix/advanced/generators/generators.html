@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <script>
+      function* generateit() {
+        console.log("first msg");
+        console.log("second msg");
+        console.log("third msg");
+      }
+      let g = generateit();
+      console.log(g);
+      g.next();
+    </script> -->
+
+
+    <!-- <script>
+      function* generateit() {
+        console.log("first msg");
+        yield('yeild no-1')
+        console.log("second msg");
+        yield('yeild no-2');
+        console.log("third msg"); 
+        yield('yeild no-3');
+      }
+      let g = generateit();
+      
+      console.log(g.next());
+      (g.next());
+      console.log(g.next());
+      console.log(g.next());
+
+    </script> -->
+
+    <!-- <script>
+      function* generateit() {
+        yield "yeild no-1";
+        yield "yeild no-2";
+        yield "yeild no-3";
+      }
+      let g = generateit();
+      for (let abc of g) {
+        console.log(abc);
+        // ithe .next() karaychi garaj nahi....sarv sobat print houn jail.
+      }
+    </script> -->
+
+
+    <script>
+      function* generateit() {
+       let nextnum = 300;
+       while(true){
+        yield(nextnum++ )
+       }
+      }
+      let g = generateit();
+      
+    //    console.log(g.next().value);
+    //    console.log(g.next().value);
+    //    console.log(g.next().value);
+    //    (g.next().value);
+    //    console.log(g.next().value);
+
+       for (let value of g){
+        if (value > 305) break;
+        console.log(value)
+       }
+    </script>
+
+
+    <!-- <script>
+      function* generateit() {
+        let result = (yield) * 10;
+        console.log (`yield is ${result}`)
+      }
+      let g = generateit();
+      g.next()
+      g.next(500);
+    </script> -->
+
+
+    <!-- <script>
+        function* generateit() {
+          let result = [ yield, yield, yield]
+          console.log (`yield is ${result}`)
+          console.log (`yield is ${result[1]}`)  //particular yield la call karnya sathi
+        }
+        let g = generateit();
+        g.next()
+        g.next(500);
+        g.next(600);
+        g.next(700);
+        g.next(800);  // array madhe 3 ch yeild aahe so he print honar nahi
+      </script> -->
+
+      
+    <!-- <script>
+      function* generateit() {
+       yield 55;
+       yield* ['node','react','angular']
+        
+      }
+      let g = generateit();
+      console.log( g.next())
+      console.log( g.next());
+      console.log( g.next());
+      console.log( g.next());
+    </script> -->
+
+
+    <!-- <script>
+        function* generateit() {
+         yield 55;
+         yield 'node'
+         yield 'react'
+         yield 'angular'
+        }
+        let g = generateit();
+        console.log( g.next())
+        console.log( [...g]);
+        
+      </script> -->
+  </body>
+</html>

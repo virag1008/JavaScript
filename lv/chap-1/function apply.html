@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var abc = [ 1,5,7,9];
+        document.write("Given array numbers is : " + abc + "<br>");
+
+        // this or null -doghanpaiki ek is compulsory
+        // math max min is already inbuilt functions so
+        var maxNo = Math.max.apply(this,abc);
+        var minNo = Math.min.apply(null,abc);
+
+        document.write("MAX array numbers is : " + maxNo + "<br>");
+        document.write("MIN array numbers is : " + minNo + "<br>");
+
+    </script>
+</body>
+</html>

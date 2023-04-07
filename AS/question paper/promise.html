@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var message = undefined;
+
+
+        var newpro = new Promise((resolve) => {
+           setTimeout(() => {
+           resolve( message = 'callback function called')
+        },3000);
+        })
+
+        newpro.then( (get) => {
+            alert(get);
+        } )
+
+    </script>
+</body>
+</html>

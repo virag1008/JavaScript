@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Employee(firstName,lastName){
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+        Employee.prototype.company = "microsoft"
+        
+        var emp1 = new Employee("Virag","Jain");
+        var emp2 = new Employee("Shubham","Patil");
+
+        document.writeln(emp1.firstName + " " + emp1.lastName +  " " + emp1.company + "<br>")
+        document.writeln(emp2.firstName + " " + emp2.lastName +  " " + emp2.company + "<br>")
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        #id4 {
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3> FORM VALIDATION </h3>
+    <form action="#" method="post" onsubmit="return funName()">
+        Name : <input type="text" id="id1">
+        <br> <br>
+        Password : <input type="password" id="id2">
+        <br> <br>
+        Confirm Password : <input type="password" id="id3">
+        <br> <br>
+        Mobile Number : <input type="text" id="id5"> <span  id="id4" > </span>
+        <br> <br>
+        <input type="submit">
+    </form>
+
+    <script>
+        function funName() {
+            var a = document.getElementById("id1").value;
+            var b = document.getElementById("id2").value;
+            var c = document.getElementById("id3").value;
+            var d = document.getElementById("id5").value;
+
+            if (a == "" || a == null) {
+                alert("please enter a name");
+                return false;
+            } else if (b.length < 6) {
+                alert("password must contain at least 6 character")
+                return false;
+            } else if (c !== b) {
+                alert("password not match")
+                return false;
+            } else if (isNaN(d)) {
+                document.getElementById("id4").innerHTML = "enter a valid mob no.";
+                return false;
+            } else if  (d == "" || d == null) {
+                alert("please enter a mob no.");
+                return false;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

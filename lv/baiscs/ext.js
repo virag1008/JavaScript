@@ -1,0 +1,1 @@
+alert("hi \n" + "namaste" + "\n" + "multiline alert by bacward slash and n ")

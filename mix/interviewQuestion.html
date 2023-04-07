@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      ////////////////////////////////////////////////////////
+
+      // let a = 3;
+      // let b = a++;
+      // let c = ++b;
+      // console.log(a,b,c)  // 4,4,4
+
+      // let a = 3;
+      // let b = a++;
+      // let c = ++a;
+      // console.log(a,b,c)  // 5,3,5
+      /////////////////////////////////////////////////////////
+
+      // const person = { age: 20, name: "jenny" };
+
+      // const peopleArray = [person, person, person];
+
+      // peopleArray[1].name = "joe";
+
+      // console.log(peopleArray[0]);  // { age: 20, name: "joe" }
+
+      /////////////////////////////////////////////////////////
+
+      // falsy and truthy values ?
+      // The specific list of "falsy" values in JavaScript is as follows:
+
+      // "" (empty string)
+      // 0, -0, NaN (invalid number)
+      // null, undefined
+      // false
+      // Any value that's not on this "falsy" list is "truthy." Here are some examples of those:
+
+      // "hello"
+      // 42
+      // true
+      // [ ], [ 1, "2", 3 ] (arrays)
+      // { }, { a: 42 } (objects)
+      // function foo() { .. } (functions)
+
+      /////////////////////////////////////////////////////////
+
+      // 1.  splite array in  2 array..
+
+      // const num = [1,2,3,4,5,8]
+
+      // const arr = []
+
+      // const arr1 = []
+
+      // for(i=0; i<num.length/2; i++){
+      //   arr.push( num[i]  )
+      // }
+      // console.log(arr)
+
+      // for(i=num.length/2 ; i < num.length ; i++){
+      //   arr1.push( num[i]  )
+      // }
+      // console.log(arr1)
+
+      /////////////////////////////////////////////////////////
+
+      // console.log(1 +  "2" + "2");
+      // console.log(1 +  +"2" + "2");
+      // console.log(1 +  -"1" + "2");
+      // console.log(+"1" +  "1" + "2");
+      // console.log( "A" - "B" + "2");
+      // console.log( "A" - "B" + 2);
+
+      // console.log("0 || 1 = "+(0 || 1));   //1
+      // console.log("1 || 2 = "+(1 || 2));   // 1
+      // console.log("0 && 1 = "+(0 && 1));   // 0
+      // console.log("1 && 2 = "+(1 && 2));   // 2
+
+      /////////////////////////////////////////////////////////
+
+      // var x = 21;
+      // var girl = function () {
+      //     console.log(x);
+      //     var x = 20;
+      // };
+      // girl ();
+
+      /////////////////////////////////////////////////////////
+
+      // console.log(1 < 2 < 3);  // 1 < 2 => true = 1
+      // console.log(3 > 2 > 1);   // 3 > 2 => true = 1  > 1  false
+
+      /////////////////////////////////////////////////////////
+
+      // for (let i = 0; i < 5; i++) {
+      //   setTimeout(function() { console.log(i); }, i * 1000 );
+      // }
+      // block scope me leta hai
+
+      // for (var i = 0; i < 5; i++) {
+      //   setTimeout(function() { console.log(i); }, i * 1000 );
+      // }
+      // global scope me leta hai
+
+      /////////////////////////////////////////////////////////
+
+      // var x = 23;
+
+      // (function(){
+      //   var x = 43;
+      //   (function random(){
+      //     x++;
+      //     console.log(x);
+      //     var x = 21;
+      //   })();
+      // })();
+
+      /////////////////////////////////////////////////////////
+
+      // let a = 0;
+      // let b = false;
+      // console.log(a == b);
+      // console.log(a === b);
+
+      /////////////////////////////////////////////////////////
+
+      // function func1() {
+      //   setTimeout(() => {
+      //     console.log(x);
+      //     console.log(y);
+      //   }, 3000);
+
+      //   var x = 2;
+      //   let y = 12;
+      // }
+      // func1();
+
+      /////////////////////////////////////////////////////////
+    </script>
+
+    <script>
+      // to check 2 array equal or not ....
+      // let array1 = [1, 2, 3];
+      // let array2 = [1, 2, 3];
+
+      // console.log(array1 === array2);
+
+      //////////////////////   METHOD 1   ////////////////////////
+
+      // if (JSON.stringify(array1) === JSON.stringify(array2)) {
+      //     console.log("Arrays are equal");
+      // } else {
+      //     console.log("Arrays are not equal");
+      // }
+
+      /////////////////////////   METHOD 2   //////////////////////
+
+      //if values are not in sequence so it arrange first in sequnce and then check
+
+      // let a = array1.sort().toString()
+      // let b = array2.sort().toString()
+
+      // console.log(a===b)
+
+      /////////////////////////   METHOD 3  ///////////////////////
+
+      // function checkEqual(arr1, arr2)
+      // {
+      // return arr1.join() == arr2.join();
+      // }
+
+      // console.log(checkEqual(array1, array1));
+    </script>
+
+    <!-- <script>
+      //  find unique number
+      let arr2 = [1, 1, 2, 2, 3, 4, 99, 4, 5, 6, 7, 7, 8, 99, 99];
+
+      let arr = arr2.sort();
+
+      let arr1 = [];
+
+      for (i = 0; i < arr.length; i++) {
+        if (arr[i] !== arr[i + 1]) {
+          arr1.push(arr[i]);
+        }
+      }
+      console.log(arr1);
+    </script> -->
+
+    <script>
+      // que - insert a value in a given array with a specified position
+      // let arr = [10, 20, 30, 40, 50, 60];
+      // // let output = [10, 20, 30, 80, 40, 50, 60]
+
+      // let p = 3;
+      // let v = 80;
+
+      ////////////// method 1 ///////////////////
+
+      // for(i=arr.length-1; i >= 0; i--){
+      //   if( i >= p ){
+      //     arr[i+1] = arr[i];
+      //   }
+      // }
+      // arr[p] = v
+      // console.log(arr)
+
+      ////////////// method 2 ///////////////////
+
+      // arr.splice(p,0,v)
+      // console.log(arr)
+
+      ////////////// method 3 ///////////////////
+
+      // let arr1 = []
+      // let arr2 = []
+
+      // for(i=0; i<p; i++){
+      //   arr1.push(arr[i])
+      // }
+
+      // for(i=p; i<arr.length; i++){
+      //   arr2.push(arr[i])
+      // }
+
+      // let a = [...arr1,v,...arr2]
+      // console.log(a)
+
+      ////////////// method 4 ///////////////////
+
+      // let q = arr[p];
+      // arr[p]= [q,v]
+      // console.log(arr.flat())
+    </script>
+
+    <script>
+      ///////////////////////////////////////////////////
+      // reverse the array
+
+      // let str = "i love coding";
+
+      // // ///////// using method ////////////////////////////////////
+
+      // let arr = str.split(" ")
+      // console.log(arr.reverse().join(' '))
+
+      // ////// without using method ///////////////////////////////////
+
+      // making str to array
+      // let arr = [];
+      // for (let i = 0; i < str.length; i++) {
+      //   arr[i] = str[i];
+      // }
+      // console.log(arr);
+
+      // // split array by space
+      // let wordStr = "";
+      // let updatedArr = [];
+      // let count = 0;
+      // for (let i = 0; i < str.length; i++) {
+      //   if (arr[i] != " ") {
+      //     wordStr += arr[i];
+      //   } else {
+      //     updatedArr[count] = wordStr;
+      //     wordStr = "";
+      //     count++;
+      //   }
+      //   updatedArr[count] = wordStr;
+      // }
+      // // console.log(updatedArr);
+
+      // // reverse the array
+      // let output = "";
+      // for (let i = updatedArr.length - 1; i >= 0; i--) {
+      //   output += updatedArr[i];
+      //   output += " ";
+      // }
+      // console.log(output);
+
+      //////////////////////////////////////////////////////
+
+      // let arr12 = [];
+
+      // for (let i = 0; i < output.length; i--) {
+      //   arr[i] = output[i];
+      // }
+      // console.log(arr12);
+
+      /////////////////////////////////////////////////////////////
+
+      // find armstrong Numbers..
+
+      // function armstrongNum(arr) {
+      //   const result = arr.map((item) => {
+      //     const innerArr = item.toString().split("");
+
+      //     const resu = innerArr.reduce((acc, curr) => {
+      //       return (acc += Number(curr) ** 3);
+      //     }, 0);
+      //     return resu;
+      //   });
+
+      //   return result.map((e, i) => {
+      //     return e === arr[i];
+      //   });
+      // }
+      // console.log(armstrongNum([370, 111, 222, 371, 153, 407, 408, 1]));
+
+      ////////////////////////////////////////////////////////////
+
+      // // class component
+
+      // class Car {
+      //   constructor() {
+      //     console.log("hello world");
+      //   }
+      // }
+      // // console.log(typeof Car)  // function
+
+      // // Car(); // Class constructor Car cannot be invoked without 'new'
+      //  const hondaCity = new Car()
+
+      ////////////////////////////////////////////////////////////
+
+      //  call method
+
+      // function Car(type, fuelType) {
+      //   this.type1 = type;
+      //   this.fuelType1 = fuelType;
+      // }
+
+      // function setBrand(brand) {
+      //   Car.call(this, "convertible", "petrol");
+      //   this.brand = brand;
+      //   console.log(this);
+      // }
+
+      // const newBrand = new setBrand("Brand1");
+
+      ////////////////////////////////////////////////////////////
+
+      // let arr = [1, 2, 3, 4, 4, 5];
+
+      // let res = {};
+
+      // arr.forEach((item) => {
+      //   if (res[item]) {
+      //     res[item]++;
+      //   } else {
+      //     res[item] = 1;
+      //   }
+      // });
+      // console.log(res);
+      ///////////////////////////////////////////////////////////
+
+      // SET
+      // we cant store values in the form of key value pair
+
+      // let myarr = [1, 2, 3, 3, 4, 5];
+
+      // let obj = new Set(myarr);
+
+      // console.log(obj);
+      // console.log(obj.size);
+      // console.log(obj.add(6, 7));
+      // console.log(obj.has(7));
+      // console.log(obj.delete(3, 4));
+      // console.log(obj);
+
+      // let newObj = { name: "virag" };
+      // console.log(obj.add(newObj));
+      // console.log(obj.clear());
+
+      // for (part of obj) {
+      //   console.log(part);
+      // }
+      // obj.forEach((ele) => console.log(ele));
+
+      ///////////////////////////////////////////////////////////
+
+      // MAP
+      // we can store values in the form of key value pair
+
+      // let myMap = new Map([
+      //   ["a1", "vir"],
+      //   ["a2", "ankur"],
+      // ]);
+      // console.log(myMap);
+
+      // myMap.set("a2", "shubham"); // key same so value updated
+      // console.log(myMap);
+      // myMap.set("a3", "chinmay");
+      // console.log(myMap);
+      // myMap.delete("a3", "chinmay");
+      // console.log(myMap);
+      // console.log(myMap.get("a2"));
+
+      // for (let [key, val] of myMap) {
+      //   console.log(`keys ${key},value ${val}`);
+      // }
+
+      // myMap.forEach((key, val) => {
+      //   console.log(`keys ${key},value ${val}`);
+      // });  // opoosite op first para value second key
+
+      // myMap.clear();
+      // console.log(myMap);
+
+      //////////////////////////////////////////////////////////
+
+      // // WEAKSET
+      // // we can store only objects but cant iterate values
+
+      // let ws = new WeakSet();
+      // console.log(ws);
+
+      // let ob1 = { name: "vir" };
+      // let ob2 = { name: "anku" };
+
+      // // console.log(ws.add("1"));  // invalid format
+      // console.log(ws.add(ob1));
+      // console.log(ws.add(ob2));
+
+      //////////////////////////////////////////////////////////
+
+      // // WEAKMAP
+      // // we can store only objects but cant iterate values
+
+      // let wkMap = new WeakMap();
+      // console.log(wkMap);
+
+      // let obj1 = { a1: "vir" };
+      // let obj2 = { a2: "shubh" };
+      // wkMap.set(obj1, "private");
+      // console.log(wkMap);
+
+      // weakSet weakMap => only for object related info
+
+      ////////////////////////////////////////////////////////////
+    </script>
+  </body>
+</html>

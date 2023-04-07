@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="id1"> </p>
+    <script>
+
+        async function funName(){
+            let promise123 = new Promise(function (resolve,reject) {
+                setTimeout( function(){ 
+                    resolve ("Sorry i am late....thanks for waiting for me")
+                } ,3000)
+            });
+
+            document.getElementById("id1").innerHTML = await promise123;
+        }
+        
+        funName();
+
+
+        // ONE OF THE SIMPLE PROGRAM 
+
+        // async function funName(){
+        //     var promise143 = Promise.resolve(1);
+        //     alert(await promise143);
+        // }
+        // funName()
+    </script>
+</body>
+</html>

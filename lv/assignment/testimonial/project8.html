@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/8cfed1d474.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .setBackground {
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(https://js-beginners.github.io/testimonial-project/img/questionBcg.jpeg)
+            center/cover no-repeat fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .heading {
+        text-align: center;
+      }
+      .heading h2 {
+        color: red;
+      }
+      .heading h1 {
+        color: white;
+        font-size: 40px;
+      }
+      .conent {
+        border: 1px solid white;
+        height: 300px;
+        width: 700px;
+        position: relative;
+        margin-top: 120px;
+        box-sizing: border-box;
+        border-radius: 20px;
+        text-align: center;
+      }
+      .fa-circle-left {
+        position: absolute;
+        color: rgb(255, 140, 0);
+        font-size: 30px;
+        margin-left: -390px;
+        margin-top: 135px;
+        cursor: pointer;
+      }
+      .fa-circle-right {
+        position: absolute;
+        color: rgb(255, 140, 0);
+        font-size: 30px;
+        margin-left: 360px;
+        cursor: pointer;
+        margin-top: 135px;
+      }
+      .conent img {
+        width: 150px;
+        position: absolute;
+        margin-left: -75px;
+        top: -50px;
+        border-radius: 50%;
+      }
+      .conent h2 {
+        color: white;
+        margin-top: 60px;
+      }
+      .conent p {
+        color: white;
+        font-size: 20px;
+        padding: 0px 20px;
+      }
+      .fa-star {
+        color: rgb(255, 140, 0);
+        margin-top: 20px;
+        margin-bottom: 15px;
+      }
+      .fa-star-half {
+        margin-top: 20px;
+        color: rgb(255, 140, 0);
+        margin-bottom: 15px;
+      }
+      .fa-quote-left {
+        color: rgb(255, 140, 0);
+        font-size: 50px;
+        margin-top: 25px;
+      }
+      .fa-solid:hover{
+        transition:0.8s;
+        color: rgb(151, 105, 50);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="setBackground">
+      <div class="heading">
+        <h2>CLIENT</h2>
+        <h1>TESTIMONIALS</h1>
+      </div>
+
+      <div class="conent">
+        <i class="fa-solid fa-circle-left" onclick="backb()"></i>
+        <i class="fa-solid fa-circle-right" onclick="nextb()"></i>
+        <img class="imgclass" src="https://js-beginners.github.io/testimonial-project/img/customer-0.jpg"
+        />
+        <h2 class="chaneText">CUSTOMER NAME</h2>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half"></i>
+        <p class="chaneText123">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit Repudiandae blanditiis eveniet Eveniet dicta repellendus error iste porro neque esse amet perspiciatis asperiores rerum quis tenetur doloremque impedit unde provident. Sunt.
+        </p>
+        <i class="fa-solid fa-quote-left"></i>
+      </div>
+    </div>
+
+    <script>
+
+      const arr = [
+        {
+            link:"https://js-beginners.github.io/testimonial-project/img/customer-0.jpg",
+            name:'CUSTOMER NAME',
+            content: "Lorem ipsum dolor sit amet consectetur adipisicing elit Repudiandae blanditiis eveniet Eveniet dicta repellendus error iste porro neque esse amet perspiciatis asperiores rerum quis tenetur doloremque impedit unde provident. Sunt."
+        },
+        {
+            link:"https://js-beginners.github.io/testimonial-project/img/customer-1.jpg",
+            name:'SANDY',
+            content: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock "
+        },
+        {
+            link:"https://js-beginners.github.io/testimonial-project/img/customer-2.jpg",
+            name:'AMY',
+            content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+        },
+        {
+            link:"https://js-beginners.github.io/testimonial-project/img/customer-4.jpg",
+            name:'WANDA',
+            content: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "
+        },
+    ]
+
+    
+    const targeted = document.querySelector(".chaneText");
+    const paratarget = document.querySelector('.chaneText123');
+
+    let imgclass1 = document.querySelector('.imgclass');
+
+      let count = 0;
+
+      function backb() {
+        if (count == 0) {
+          count = 4;
+        }
+        let updated = --count
+        return (
+            targeted.innerText = arr[updated].name ,
+            paratarget.innerText =  arr[updated].content ,
+            imgclass1.src = arr[updated].link
+            );
+      }
+      function nextb() {
+        if (count == 3) {
+          count = -1;
+        }
+        let latestupdate = ++count
+        return (
+            targeted.innerText = arr[latestupdate].name ,
+            paratarget.innerText =  arr[latestupdate].content ,
+            imgclass1.src = arr[latestupdate].link 
+            );
+      }
+    </script>
+
+  </body>
+</html>

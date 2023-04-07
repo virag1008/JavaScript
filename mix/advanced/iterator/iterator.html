@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        const arr = [100,200,300,400];
+        console.log(typeof arr[Symbol.iterator]);
+
+        let itr = arr[Symbol.iterator]();
+        console.log(itr);
+
+        console.log(itr.next());
+        console.log( 'hii' )
+        console.log(itr.next());
+
+        (itr.next());
+        // jr konti value print nasel karaychi tr console.log remove karun takayche
+        // aapn madhe jevha vatl jevdha code vatla lihu shakto.
+        console.log(itr.next());
+        console.log(itr.next());
+
+    </script> -->
+
+
+    <!-- <script>
+        let abc = [10,20,30,40,50,60];
+
+        var iterat = abc[Symbol.iterator]();
+        let result = iterat.next();
+
+        while (!result.done) {
+        console.log(result.value);
+        result = iterat.next();
+        }
+    </script> -->
+
+
+    <!-- <script>
+        var str = "Virag jain";
+        
+        var iterat = str[Symbol.iterator]();
+        let result = iterat.next();
+
+        while (!result.done) {
+        console.log(result.value);
+        result = iterat.next();
+        }
+    </script> -->
+
+    <script>
+        // WITHOUT USING ITERATOR..
+        // dont try to understand the program bcoz we have iterator now ...so this is only for understanding.
+
+        function numiterator(arr){
+            var nextnum = 0;
+            return{
+                next(){
+                    if(nextnum < arr.length){
+                        return{
+                            value: arr[nextnum++],
+                            done:false
+                        }
+                    }else{
+                        return{
+                            done:true
+                        }
+                    }
+                }
+            }
+        }
+        let numbers = [100,200,300,400,500];
+
+        let num = numiterator(numbers);
+        console.log(num.next().value);
+        (num.next().value);
+        console.log(num.next().value);
+        console.log(num.next().value);
+    </script>
+</body>
+</html>

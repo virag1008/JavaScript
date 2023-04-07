@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- METHOD CALL -->
+    <script>
+        var abc = {
+            fullname: function (city, country) {
+                return this.firsname + " " + this.lastname + " " + city + " " + country;
+            }
+        }
+        var obj = {
+            firsname: "virag",
+            lastname: "jain"
+        }
+
+        console.log(abc.fullname.call(obj, 'dhule', 'india'));
+    </script>
+
+
+
+    <!-- METHOD APPLY -->
+    <script>
+        var abc = {
+            fullname: function (city, country) {
+                return this.firsname + " " + this.lastname + " " + city + " " + country;
+            }
+        }
+        var obj = {
+            firsname: "virag",
+            lastname: "jain"
+        }
+
+        console.log(abc.fullname.apply(obj, ['dhule', 'india']));
+    </script>
+
+
+    <!-- METHOD BIND -->
+    <script>
+        var abc = {
+            fullname: function (city, country) {
+                return this.firsname + " " + this.lastname + " " + city + " " + country;
+            }
+        }
+        var obj = {
+            firsname: "virag",
+            lastname: "jain"
+        }
+
+        var bindfun = (abc.fullname.bind(obj,'dhule', 'india'));
+        console.log(bindfun());
+
+    </script>
+</body>
+</html>

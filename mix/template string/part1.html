@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = "virag";
+        var b = 99;
+
+        // Traditional way
+        document.write("hello" + " " + a + " your marks is- "+ b +"<br>");
+
+        // es-6 template string.
+        document.write(`hello '${a}'
+         your marks
+          is- "${b}"`);
+
+        // multiline effect
+        var hello = `hello '${a}' 
+                your marks
+                       is- "${b}"`;
+        console.log(hello);
+
+        
+
+    </script>
+</body>
+</html>

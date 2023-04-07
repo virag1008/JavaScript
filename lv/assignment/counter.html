@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            background-image: url(/assignment/todays_date_time/pic2.jpg);
+            background-position: center;
+            background-size: auto;
+            background-repeat: no-repeat;
+        }
+
+        #outer {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+        }
+
+        #inner {
+            border: 1px solid white;
+            box-shadow: 5px 4px 4px white;
+            border-radius: 20px;
+            text-align: center;
+            padding: 50px;
+        }
+
+        p {
+            font-size: 100px;
+
+        }
+
+        button {
+            font-size: 20px;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            background-color: aquamarine;
+            color: red;
+        }
+
+        h2 {
+            color: white;
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outer">
+        <div id="inner">
+            <h2> COUNTER </h2>
+            <p id="id1"> 0 </p>
+            <button onclick="funAdd()">count add </button>
+            <button onclick="funMinus()">count remove </button>
+        </div>
+    </div>
+    <script>
+        let a = 0;
+        function funAdd() {
+            a = a + 1;
+            document.getElementById("id1").innerHTML = a;
+            if (a > 0) {
+                document.getElementById("id1").style.color = "green";
+            } else if(a < 0) {
+                document.getElementById("id1").style.color = "red";
+            }else{
+                document.getElementById("id1").style.color = "black";
+            }
+        }
+        function funMinus() {
+            a = a - 1;
+            document.getElementById("id1").innerHTML = a;
+            if (a > 0) {
+                document.getElementById("id1").style.color = "green";
+            } else if(a < 0) {
+                document.getElementById("id1").style.color = "red";
+            }else{
+                document.getElementById("id1").style.color = "black";
+            }
+        }
+
+    </script>
+</body>
+</html>

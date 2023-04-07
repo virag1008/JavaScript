@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<!-- CLASS -->
+
+    <script>
+        class Shubh {
+            constructor(para1,para2){
+                this.parameter_1 = para1;
+                this.parameter_2 = para2;
+            } 
+            getFullName(){
+                return this.parameter_1 * this.parameter_2}
+        }
+        var instance = new Shubh(4,5);
+        console.log(instance.getFullName());
+    </script>
+
+<!-- CLASS PROTOTYPE -->
+
+    <!-- <script>
+        class Shubh {
+            constructor(para1,para2){
+                this.parameter_1 = para1;
+                this.parameter_2 = para2;
+            } 
+            getFullName(){
+                return this.parameter_1 + this.parameter_2 + this.para3
+            }
+        }
+        Shubh.prototype.para3 = 26;
+
+        // ARROW FUNCTION DOES NOT SUPPORT IN PROTOTYPE.
+
+        // Shubh.prototype.getFirstName = () => {
+        //     return this.parameter_1 * this.parameter_2
+        // }
+
+        Shubh.prototype.getFirstName = function(){
+            return this.parameter_1 * this.parameter_2
+        }
+        
+        var instance = new Shubh(4,5);
+        console.log(instance.getFullName());
+        console.log(instance.getFirstName());
+
+    </script> -->
+
+<!-- CLASS ENCAPSULATION -->
+
+    <script>
+        class Vir {
+            constructor(para1, para2){
+                
+            }
+        }
+    </script>
+
+</body>
+
+</html>

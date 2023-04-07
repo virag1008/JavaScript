@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  Que. can we create instance of abstract class ..ANS is no and here is the explanation.
+        function funName(name){
+            this.name = name;
+            throw new console.error(" You cannot create instance of abstract class.");
+            // if we comment this throw line then we cannot see the error.
+        }
+        funName.prototype.display = function (){
+            return this.name
+        }
+
+        var vir = new funName();
+    </script>
+</body>
+</html>

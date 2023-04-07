@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- without using this -->
+     <button onclick="getElementById('virag').innerHTML = Date()" > Todays date and time </button>
+     <p id="virag"></p>
+     
+
+
+
+
+     <!-- with using this -->
+     <button onclick="this.innerHTML = Date()" > Todays date and time </button>
+
+     <script>
+        // 2 backward slash dilyavar o/p madhe ek backward  slash yete.
+        var a = "virag \\\\ jain ";
+        document.write("<br>" + a);
+     </script>
+
+<p id="demo"></p>
+
+<script>
+    // x1 is a string
+    let x1 = "John";
+    
+    // y1 is an object
+    let y1 = new String("John");
+    
+    document.getElementById("demo").innerHTML =
+    typeof x1 + "<br>" + typeof y1;
+    </script>
+
+
+
+
+</body>
+</html>

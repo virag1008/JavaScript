@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sleep = millisecond => {
+            return new Promise(resolve => setTimeout(resolve,millisecond) )
+        };
+
+        // SAME LINE BUT WITHOUT SHORTCUTS.....
+        // function sleep(millisecond){
+        //     return new Promise(resolve => setTimeout(resolve,millisecond));
+        // }
+
+        document.write("program execution started <br>")
+        document.write("welcome to learnvern <br>");
+
+        sleep(2000).then( () => {
+            document.write("program execution ended")
+        } );
+    </script>
+</body>
+</html>

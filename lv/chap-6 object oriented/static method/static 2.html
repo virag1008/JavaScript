@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Test{
+            static abc1(){
+                return "A static method 1 is called <br>"
+            }
+            static abc2(){
+                return "A static method 2 is called <br>"
+            }
+            static abc1(){
+                return "the latest static method is called which is of same staticName <br>"
+            }
+        }
+        document.write(Test.abc1())
+        document.write(Test.abc2())
+    </script>
+</body>
+</html>

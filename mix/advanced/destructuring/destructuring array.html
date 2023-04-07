@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var abc = ["virag", 25, "dhule"];
+
+        // BEFORE ES-6
+
+        //  let name = abc[0];
+        //  let age = abc[1];
+        //  let city = abc[2];
+
+        //  console.log(name);
+        //  console.log(age);
+        //  console.log(city);
+
+
+        // AFTER ES-6 DESTRUCTURING THE ARRAY;
+
+        var [ name, age = 20, city] = abc;
+
+         console.log(name);
+         console.log(age);
+         console.log(city);
+
+    </script>
+
+    <script>
+        // when data is missing...
+         var person = ['kohli', 'raina', , 'sachin'];
+         
+         var [chasemaster ] = person;
+         console.log(chasemaster);
+         console.log(person);
+
+         var [chasemaster, , captain_cool = "dhoni",master_blaster ] = person;
+         console.log(chasemaster);
+         console.log(captain_cool);
+         console.log(master_blaster);
+         
+    </script>
+
+    <script>
+        var a = ["vir","dhule",26,["male","agrasen"]];
+
+        //var [ name, city, age = 20,[gender,school]] = a
+
+        //  console.log(name);
+        //  console.log(age);
+        //  console.log(city);
+        //  console.log(gender);
+        //  console.log(school);
+
+        var [ name, ...rest] = a;
+         console.log(name);
+         console.log(rest);
+
+    </script>
+
+    <script>
+        var a = ["vir","dhule",26,];
+
+        function user ([ name, city, age]){
+            console.log(name)
+            console.log(city)
+            console.log(age)
+        }
+        user(a)
+        
+    </script>
+
+<script>
+    
+
+    function user (){
+        return [ "vir","dhule",26 ]
+    };
+    let [ nav, gav, vay] = user();
+            console.log(nav)
+            console.log(gav)
+            console.log(vay)
+    
+</script>
+
+</body>
+</html>

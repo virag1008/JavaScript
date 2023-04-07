@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var w = new WeakSet();
+
+        var obj1 = {};
+        var obj2 = {};
+
+        w.add(obj1);
+        w.add(obj2);
+
+        document.write( "check obj1 is present or not:- " + w.has(obj1) + "<br>");
+        document.write( "check obj2 is present or not:- " + w.has(obj2) + "<br>");
+
+        // obj3 nahi ghetla and has condition check keli tr error yeto ..
+        // if jr obj exist asel but delete kela asel tr has method false return karel..
+
+        // document.write( "check obj3 is present or not:- " + w.has(obj3) + "<br>");
+
+        // DELETE method 
+
+        w.delete(obj2);
+        document.write(  "<br>"+"After deleting obj2 "  + "<br>");
+        document.write( "check obj2 is present or not:- " + w.has(obj2) + "<br>");
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2> DATE OBJECT/METHOD </h2>
+    <hr>
+
+    <script>
+        var xyz = new Date();
+        document.write(xyz + "<hr>");
+    </script>
+
+    <p> 1-A. toDateString - it just give day and date </p>
+    <script>
+        var xyz = new Date();
+        document.write(xyz.toDateString() + "<hr>");
+    </script>
+    <p> 1-B. toTimeString - it just give time </p>
+     <script>
+        var xyz = new Date();
+        document.write(xyz.toTimeString() + "<hr>");
+    </script>
+
+    <!-- ******************************************* -->
+
+    <h3>2.getDate 3.getMonth 4.getFullYear 5.getDay </h3>
+    <script>
+        var xyz = new Date();
+        document.write(xyz.getDate() + "<br>");
+        document.write(xyz.getMonth() + "<br>");
+        document.write(xyz.getFullYear() + "<br>");
+        document.write(xyz.getDay() + "<br>");
+    </script>
+    <p>It consider Month - Jan=0 , Feb=1 .....</p>
+    <p>It consider Day - Sun=0 , Mon=1 .....</p>
+    using this we can get any day of particular date eg.21 dec 1995 day is ? (ans => 4 = thu )<br>
+    <script>
+        var xyz = new Date("21 dec 1995");
+        document.write(xyz.getDay());
+    </script>
+
+    <hr>
+
+    <h3>6.getHours 7.getMinutes 8.getSeconds 9.getMilliseconds </h3>
+    <script>
+        var xyz = new Date();
+        document.write(xyz.getHours() + "<br>");
+        document.write(xyz.getMinutes() + "<br>");
+        document.write(xyz.getSeconds() + "<br>");
+        document.write(xyz.getMilliseconds() + "<br>");
+    </script>
+
+    <hr>
+
+    <h3>10.setDate  11.setMonth  12.setFullYear  13.setHours 14.setMinutes 15.setSeconds 16.setMilliseconds </h3>
+    <script>
+        var xyz = new Date();
+        xyz.setDate(8);
+        // xyz.setMonth(11)
+        // xyz.setFullYear(2020);
+        //   xyz.setHours(16)
+        
+        document.write(xyz + "<br>");
+    </script>
+
+</body>
+
+</html>

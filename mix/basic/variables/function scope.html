@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+             if (10 == 10){
+                var a =25;
+             }
+             console.log(a);
+             
+             //**************************************
+
+
+             if (10 == 10){
+                const b =25;
+             }
+             console.log(b);     // show error
+
+              //**************************************
+
+
+              if (10 == 10){
+                let c =25;
+             }
+             console.log(c);    // show error
+
+             // var he if chya scope() baher pn work karto but let and const nahi..
+
+             // var function chya scope{} madhe ghetla tr baher work karat nahi
+
+
+             function vir (){
+                var abc = 15;
+             }
+             vir();
+             console.log(abc);
+
+    </script>
+
+    <script>
+    
+    var a = 10;
+
+    if("a" == "a"){
+      var a = 20;
+      console.log(a)
+    }
+    console.log(a)
+
+    //***************************************************
+    var b = 10;
+    
+    if("a" == "a"){
+      let b = 20;
+      console.log(b)
+    }
+    console.log(b)
+
+
+
+    </script>
+</body>
+</html>

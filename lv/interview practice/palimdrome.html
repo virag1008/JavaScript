@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        var palinD = "level";
+        console.log(palinD);
+
+        var xyz = palinD.split("").reverse().join('')
+        console.log(xyz);
+
+        if (palinD === xyz) {
+            console.log("it is in  palindrome")
+        } else {
+            console.log("it is not a palindrome")
+        }
+    </script>
+
+    <script>
+        var palinD = "lEvel";
+        var lwcse = (palinD.toLowerCase());
+        console.log((palinD))
+
+        var xyz = palinD.split("").reverse().join('').toLowerCase();
+        // reverse().join('')
+        console.log(xyz);
+
+        if (lwcse === xyz) {
+            console.log("it is in  palindrome")
+        } else {
+            console.log("it is not a palindrome")
+        }
+    </script> -->
+
+
+
+    <script>
+        let str = 'level';
+        let store = "";
+        console.log(str);
+
+        for(var i = (str.length-1); i >= 0; i--){
+            store = store + str[i];
+        }
+
+        console.log(store);
+
+        if(store == str){
+            document.write("enter name is in palindorme")
+        }else{
+            document.write("enter name is not in palindorme")
+        }
+
+
+        // if (str.length == 3) {
+        //     if (str.charAt(0) == (str.charAt(2))){
+        //         document.write("enter name is in palindorme")
+        //     } else {
+        //         document.write("enter name is not in palindorme")
+        //     }
+        // }if (str.length == 4) {
+        //     if (str.charAt(0) == str.charAt(3) && str.charAt(1) == str.charAt(2) ){
+        //         document.write("enter name is in palindorme")
+        //     }else {
+        //         document.write("enter name is not in palindorme")
+        //     }
+        // }if (str.length == 1) {
+        //         document.write("enter name is in palindorme")
+        // }if (str.length == 5) {
+        //     if (str.charAt(0) == str.charAt(4) && str.charAt(1) == str.charAt(3) ){
+        //         document.write("enter name is in palindorme")
+        //     }else {
+        //         document.write("enter name is not in palindorme")
+        //     }
+        // }
+
+    </script>
+
+</body>
+
+</html>

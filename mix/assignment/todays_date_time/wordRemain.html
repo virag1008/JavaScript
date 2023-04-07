@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        *{
+            text-align: center;
+        }
+        .boom{
+            height: 100vh;
+            background-image: url(https://images.pexels.com/photos/776635/pexels-photo-776635.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+  </head>
+  <body onkeyup = "fun()">
+
+    <div class="boom">
+        <textarea id="msg" cols="30" rows="10" maxlength="10"></textarea>
+        
+        <h3>remaining words <span id="num"> 10 </span></h3>
+        
+    </div>
+    
+   
+
+    <script>
+        var count = 10;
+        var spanid = document.getElementById('num');
+        var txt = document.getElementById("msg");
+     
+
+
+      function fun() {
+        var ab = txt.value ;
+       
+        var mm = count + ab.length
+        var remain = count - ab.length;
+        console.log(ab.length);
+
+        return spanid.innerHTML = remain;
+
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. UNNAMED 
+
+        var emp = class {
+            constructor(id, name) {
+                this.id = id;
+                this.name = name;
+            }
+        };
+        document.writeln(emp.name)
+        document.write(emp.id + "<hr>");
+
+
+
+
+
+        //******************************************
+        // 2. RE-DECLARING THE CLASS
+
+        var emp = class {
+            constructor(id, name) {
+                this.id = id;
+                this.name = name
+            }
+            details() {
+                document.writeln(this.id + " " + this.name + "<br>")
+            }
+        }
+        var object1 = new emp(1, "virag");
+        object1.details()
+        var object1 = new emp(2, "shubham");
+        object1.details();
+
+        // same program is redeclaring 
+
+        var emp = class {
+            constructor(id, name) {
+                this.id = id;
+                this.name = name
+            }
+            details() {
+                document.writeln(this.id + " " + this.name + "<hr>")
+            }
+        }
+        var object1 = new emp(3, "viru");
+        object1.details()
+        
+
+
+        //*******************************************
+         // 3. NAMED 
+
+         var emp = class Employee{
+            constructor(id, name) {
+                this.id = id;
+                this.name = name;
+            }
+        }
+        document.writeln(emp.name);
+        document.write(Employee.name);
+    </script>
+</body>
+
+</html>

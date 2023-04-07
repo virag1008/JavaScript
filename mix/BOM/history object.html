@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS- History Object</h1>
+    <button onclick="backFun()" >BACK</button>
+    <button onclick="forwardFun()" >FORWARD </button>
+    <button onclick="goFun()" >GO</button>
+    <p> if Current folder's url paste on another tab then it will show histrory of that tab </p>
+
+
+    <script>
+
+        document.write(" <br><br>  no of pages open in current tab(history) : " + history.length )
+
+
+         function backFun(){
+             history.back()
+         }
+         function forwardFun(){
+            history.forward()
+        }
+        function goFun(){
+            history.go(-2);
+        }
+    </script>
+</body>
+</html>

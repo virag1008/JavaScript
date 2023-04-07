@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function funName(){
+            //var abc = "local varible print globally byusing window object"
+            window.abc = "local varible print globally using window object!!!"
+            document.write(window.abc + "<br>");
+
+            //this print bcoz of this (window.) word
+
+            // internal without window but from outside we call with window. =>
+            var xyz= "print this"
+        }
+        funName();
+        funName2()
+
+
+         // xyz la vr window word use kela nahi so undefined yeil aani ithe window use kela so error yenar nahi
+        document.write(window.xyz + "<br>")
+        document.write(window.xyz123 + "<br>")
+        document.write(window.xyz456 + "<br>")
+
+
+
+
+        // window word ithe lihle nahi lihle tari chalte but good practice ki window word liha.
+        document.write(window.abc + "<br>");
+        document.write(abc + "<br>");
+
+        // global variable zala window lavlya mule so another function madhun pn call hot aahe
+        function funName2(){
+            document.write(abc + "<br>")
+        }
+
+
+    </script>
+</body>
+</html>

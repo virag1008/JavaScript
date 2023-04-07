@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("<h2> Three ways to add object </h2> <br>")
+
+        document.write("<h2> 1. using object literals </h2> <br>")
+
+        var abc = {
+            id:1,
+            name : "shyam",
+            salary : 20000
+        }
+        document.write( abc.id + " "  + abc.name + " "  + abc.salary + "<br>")
+
+        //-------------------------------------------
+
+        document.write("<h2> 2. By creating instance of object (using 'new object' keyword)</h2> <br>")
+
+        var emp = new Object();
+        emp.id = 1;
+        emp.name = "shyam";
+        emp.salary = 20000;
+
+        document.writeln(emp.id + " "  +  emp.name + " "  + emp.salary)
+
+        // for (ab in emp){
+        //     document.writeln(emp[ab]+" ")
+        // }
+
+        //------------------------------------------
+
+        document.write("<h2> 2. By using object constructor (using 'new & this' keyword with function )</h2> <br>")
+
+        function emplo00 (id,name,salary){
+            this.id = id;
+            this.name = name;
+            this.salary = salary;
+        }
+        
+        var a = new emplo00(1, "shyam", 20000);
+
+        document.writeln(a.id + " "  +  a.name + " "  + a.salary)
+
+        // for (xy in a){
+        //     document.writeln(a[xy])
+        // }
+    </script>
+</body>
+</html>

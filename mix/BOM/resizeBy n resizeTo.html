@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="funName_1()"> OPEN WINDOW </button>
+    <button onclick="funName_2()"> RESIZE WINDOW </button>
+    <script>
+        var virag;
+       function funName_1(){
+         virag = window.open("","","width=500px,height=150px,left=50px,top=50px");
+         virag.document.write("write here");
+         virag.confirm("confirm box");
+       }
+       function funName_2(){
+        virag.window.resizeTo(600,600)
+       }
+    </script>
+</body>
+</html>

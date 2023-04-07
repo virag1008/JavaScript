@@ -1,0 +1,17 @@
+[
+    {
+        "name":"virag",
+        "age":26,
+        "city":"dhule"
+    },
+    {
+        "name":"shubh",
+        "age":25,
+        "city":"pune"
+    },
+    {
+        "name":"shankar",
+        "age":24,
+        "city":"nashik"
+        }
+]

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const radius = [ 1, 2, 3, 4 ];
+
+        const area = function (radi){
+            return Math.PI * radi * radi
+        };
+        // const circumf = function (radius){
+        //     return Math.PI * radius * 2;
+        // };
+        // const dia = function (radius){
+        //     return radius * 2;
+        // };
+
+        const calculate = function (rad , logic ){
+            const output = [];
+            for( let i=0; i < radius.length; i++ ){
+                output.push(logic(rad[i]));
+            }
+            return output;
+        }
+        console.log(calculate(radius,area));
+        console.log(radius.map(area));
+
+        // console.log(calculate(radius,circumf));
+        // console.log(radius.map(circumf));
+
+        // console.log(calculate(radius,dia));
+        // console.log(radius.map(dia));
+
+        // MAP METHOD IS ALSO ACT LIKE A HIGHER ORDER FUNCTION... 
+    </script>
+
+
+
+    <!-- <script>
+        const radius = [ 1, 2, 3, 4 ];
+
+        const area = function (radius){
+            return Math.PI * radius * radius
+        };
+
+        Array.prototype.calculate = function ( logic ){
+            const output = [];
+            for( let i=0; i < this.length; i++ ){
+                output.push(logic(this[i]));
+            }
+            return output;
+        }
+        console.log(radius.calculate(area));
+        // console.log(radius.map(area));
+
+        // MAP METHOD IS ALSO ACT LIKE A HIGHER ORDER FUNCTION... 
+
+    </script> -->
+</body>
+</html>

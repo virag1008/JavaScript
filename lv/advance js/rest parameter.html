@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // WRONG WAY
+        // function restPara (...one, ...wrong, ...wrong)
+        // function restPara (...wrong, arg2, arg3)
+
+        // CORRECT WAY
+        function restPara(a, b, ...lastParaM) {
+
+            console.log("a " + a);
+            console.log("b " + b);
+            console.log(lastParaM[0]);
+            console.log(lastParaM[1]);
+            console.log(lastParaM[2]);
+            console.log(lastParaM);
+        }
+
+        restPara("one", "two", "three", "four", "five", "six");
+        // restPara("one", "two", "three");
+        // restPara("one", "two");
+
+    </script>
+
+
+    <script>
+        function multiply(multiplier, ...theArgs) {
+            return theArgs.map((element) => multiplier * element);
+        }
+
+        const arr = multiply(2, 15, 25, 42);
+        console.log(arr);
+    </script>
+
+
+    <script>
+            function funName (a,b,...rest){
+                var sum = a+b;
+                for( i=0; i< rest.length; i++){
+                   sum += (rest[i])
+                }
+
+                console.log(sum)
+            }
+            
+            funName(10,20,30,40,50,60)
+    </script>
+</body>
+
+</html>

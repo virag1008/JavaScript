@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list1">
+        <li class="equalAttributeAndValue">Apple</li>
+        <li>Grapes</li>
+        <li>Mango</li>
+        <li>pineapple</li>
+    </ul>
+
+    <ul id="list2">
+        <li>Orange</li>
+        <li class="equalAttributeAndValue">Apple</li>
+    </ul>
+
+
+    <script>
+        var target1= document.getElementById("list1").children[0];
+        var target2= document.getElementById("list2").children[1];
+
+        var xyz = target1.isEqualNode(target2);
+        console.log(xyz);
+        //it confirm all the node type name values attribute attribute-value if all are same then it show true.
+    </script>
+</body>
+</html>

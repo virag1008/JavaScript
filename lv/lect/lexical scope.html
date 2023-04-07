@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //lexical scoping
+        function outer(){
+            const a=100;
+            function inner(){
+                console.log("my value:"+ a );
+            }
+            inner()
+        }
+        outer();
+</script>
+
+
+<script>
+    
+    function outerFunction() {
+        var a = 7;
+        function innerFunction() {
+            console.log('value of a:', a);
+        }
+        return innerFunction
+    }
+    outerFunction()();
+    
+</script>
+
+
+<script>
+    var q=15;
+    function outerFunction(s) {
+        var a = 7;
+        function innerFunction() {
+            return a+q+s;
+        }
+        return innerFunction
+    }
+    const func1 = outerFunction(12)
+    console.log(func1());
+</script>
+
+<script>
+    var q=13;
+    function outerFunction() {
+        var a = 7;
+        function innerFunction() {
+            return a+q;
+        }
+        return innerFunction
+    }
+    const fun = outerFunction()
+    console.log(outerFunction()());
+</script>
+
+
+<script>
+    function outerFunction() {
+        var a = 10;
+        return function() {
+            return a;
+        }
+    }
+    const func2 = outerFunction();
+    console.log(func2());
+
+    //********************************************
+
+
+    var vj=function shubh (x){
+    return function(y){
+        return function (z){
+            return x+y+z;
+        }
+    }
+}
+var abc = vj(10); 
+var abd = abc(20); 
+var abcc = abd(30); 
+console.log(abcc);
+    
+
+//*************************************************
+    // Self-invoking function
+    // Anonym
+
+    function makeAdder(x) {
+      return function (y) {
+        return x + y;
+      }
+    }
+    
+    const add5 = makeAdder(5);  
+    console.log(add5(2)); 
+
+    //**********************************************
+
+   function sum(a,b,c){
+         return a*b*c
+    };
+    console.log(sum (10,20,3));
+    
+    //  *******************************************
+    
+    let multi= function(a){
+    return function(b){
+        return function(c){
+            return a*b*c;
+        };
+    }
+}
+
+let val1=multi(10);
+let val2=val1(20);
+let val3=val2(3);
+console.log(val3);
+
+//.....................................................
+//sum of no that divisible by 2
+
+var sum=0
+for(var a=0; a<=100 ;a++){
+    if(a % 2 == 0){
+        sum=sum+a;
+    }
+}
+console.log(sum);
+
+//..................................................
+
+
+// for(var i=0; i<5;i++){
+//     setTimeout(function(){
+// document.write(i)
+//     })
+// };
+
+
+
+// for(let i=0;i<5;i++){
+//             setTimeout(function()
+//             {document.write(i)});
+//         }
+
+
+
+
+// var i = 5;
+// for (var i = 0; i < 10; i++) {
+//     setTimeout(function(){})
+// }
+// document.write(i)
+
+
+var i = 5;
+for ( i = 0; i < 10; i++) {
+    setTimeout(function(){})
+}
+document.write(i)
+
+
+
+// console.log("A" - "B"+ "2");
+
+
+
+
+
+// let year=2020
+// if(year%4===0){
+//   console.log("this "+year+"is a leap year")
+
+// }
+// else{
+//   "the given year is not a leap year"
+// }
+
+
+// leap Lear year
+
+</script>
+</body>
+</html>
+
+
+
+    

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #id1{
+            color: red;
+            animation: blinker 1.5s linear infinite ;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.w3schools.com/"> <marquee behavior="" direction="right" scrollamount="5" id="id1"onMouseOver="this.stop()" onMouseOut="this.start()" >click here to move on another page</marquee>  </a>
+
+    <a href="https://www.w3schools.com/"><button id="id2"> click here </button> </a>
+
+    <script>
+        var a = prompt("enter your age");
+        if(a >= 18){
+
+        }else{
+            document.write("sorry you are not eligible");
+            document.getElementById("id1").style.display = 'none';
+            document.getElementById("id2").style.display = 'none'
+        }
+
+
+    </script>
+</body>
+</html>

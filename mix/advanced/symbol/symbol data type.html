@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        var a = Symbol();
+        console.log(a)
+
+        var b = Symbol("hello")
+        console.log(b)
+        console.log(typeof b);
+
+
+        var c = Symbol("hello");
+        console.log(c);
+        console.log(b == c);
+
+        // we cant use symbol data type directly , we need to convert it in string ..
+
+        var d = Symbol("hii world");
+        // alert(d);  // error occared. 
+        
+        alert(d.toString()); 
+        alert(d.description); 
+        console.log(d.description); 
+        
+    </script> -->
+
+    <!-- <script>
+        var vay = Symbol('age');
+
+        const user = {
+            'name':'virag',
+            'class':'MERN',
+            //'age': 25
+            [vay]:25
+        }
+        console.log(user)
+    </script> -->
+
+    
+    <!-- <script>
+        var vay = Symbol('age');
+
+        const user = {
+            'name':'virag',
+            'class':'MERN'
+        }
+        user[vay] = 25
+        console.log(user);
+
+        console.log(user.vay);  //show undefined
+        console.log(user[vay]);  //show 25
+
+        console.log(user);
+        console.log(JSON.stringify(user));
+
+    </script> -->
+
+    <script>
+        var vay = Symbol('age');
+
+        const user = {
+            'name':'virag',
+            'class':'MERN',
+            [vay]:25
+        }
+
+        console.log(user);
+        console.log(JSON.stringify(user));
+        // symbol not gone in json format.
+        // json madhe symbol pathavnya sathi toString use karave lagte.
+
+
+        for (const key in user) {
+            console.log(key + "- " +user[key])
+        }
+        // symbol not work in  forin loop
+    </script>
+</body>
+</html>

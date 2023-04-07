@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <STYle>
+        *{
+            text-align: center;
+        }
+    </STYle>
+</head>
+<body>
+    <h2>MATH METHOD</h2><hr>
+    1. ceil - decimal kadhun tyachi higher integer deto <br>
+    <script>
+        var a= Math.ceil(5.45546);
+        document.write(a + "<br>");
+        var a= Math.ceil(-5.45546);
+        document.write(a + "<hr>");
+    </script>
+     2. floor-decimal kadhun tyachi lower integer deto<br>
+     <script>
+         var a= Math.floor(5.45546);
+         document.write(a + "<br>");
+         var a= Math.floor(-5.45546);
+         document.write(a + "<hr>");
+     </script>
+     3. round-{0.5 > highter integer:0.5 < lower integer: <br>
+     <script>
+         var a= Math.round(5.45546);
+         document.write(a + "<br>");
+         var a= Math.round(5.5);
+         document.write(a + "<br>");
+         var a= Math.round(-5.45546);
+         document.write(a + "<hr>");
+     </script>
+     4. trunc-point nantrche digit remove karto <br>
+     <script>
+         var a= Math.round('5.45546');
+         document.write(a + "<br>");
+         var a= Math.round(5.5);
+         document.write(a + "<br>");
+         var a= Math.round(-5.45546);
+         document.write(a + "<hr>");
+     </script>
+     4. Max-max no select karto <br>
+     <script>
+         var a= Math.max(10,40,-10,50.66);
+         document.write(a + "<br>");
+     </script>
+     5. MIN-min no select karto <br>
+     <script>
+         var a= Math.min(10,40,-10,50.66);
+         document.write(a + "<hr>");
+     </script>
+      6. sqrt-square root <br>
+      <script>
+          var a= Math.sqrt(64);
+          document.write(a + "<br>");
+          var a= Math.sqrt(65);
+          document.write(a + "<hr>");
+      </script>
+
+      7. cbrt-cube root <br>
+      <script>
+          var a= Math.cbrt(125);
+          document.write(a + "<hr>");
+      </script>
+
+      8. pow-power of <br>
+      <script>
+          var a= Math.pow(2,3);
+          // 2x2x2=8
+          document.write(a + "<hr>");
+      </script>
+
+       9. random-random no every time page refresh kelyavar <br>
+       <script>
+           var a= Math.random();
+           document.write(a + "<br>");
+
+           var b=Math.floor(Math.random()*10)+1
+           document.write(b+ "<hr>");
+       </script>
+
+       10. abs-absolute value detat <br>
+       <script>
+           var a= Math.abs(5.25);
+           document.write(a + "<br>");
+           var b=Math.abs(-2.54)
+           document.write(b+ "<br>");
+           var b=Math.abs(null)
+           document.write(b+ "<br>");
+           var b=Math.abs(Infinity)
+           document.write(b+ "<br>");
+           var b=Math.abs("hii")
+           document.write(b+ "<hr>");
+       </script>
+
+11. PI value <br>
+<script>
+    var a= Math.PI;
+    document.write(a + "<hr>");
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = ["one", "two", "three", "four", "five"];
+        var b = a.slice(2, 4);
+        document.write(b + "<hr>")
+    </script>
+    <script>
+        var a = ["one", "two", "three", "four", "five"];
+        var b = a.slice(0, 4);
+        document.write(b + "<hr>")
+    </script>
+    <script>
+        var a = ["one", "two", "three", "four", "five"];
+        var b = a.slice(2);
+        document.write(b + "<hr>")
+    </script>
+    <script>
+        var a = ["one", "two", "three", "four", "five"];
+        var b = a.slice(-2);
+        // negative right side ne start hote -1=five,-2=for,-3=three etc.
+        document.write(b + "<hr>")
+    </script>
+    <script>
+        var a = ["one", "two", "three", "four", "five"];
+        var b = a.slice(-5, -1);
+        document.write(b + "<hr>")
+    </script>
+
+
+     <!-- ---------------------------------------- -->
+    <h1>SPLICE FUNCTION</h1>
+
+    <script>
+        var a = ["virag","akshay","rajpal","yadav"];
+        document.write(a + "<hr>")
+
+        a.splice(2, 0, "NEW", "LATEST")
+        document.write(a + "<hr>")
+        //2 = index pasun start
+        //0 = value delete
+        // new values
+    </script>
+
+    <script>
+        var a = ["virag","akshay","rajpal","yadav"];
+        document.write(a + "<hr>")
+
+        a.splice(3, 1, "delete", "1-value")
+        document.write(a + "<hr>")
+    </script>
+
+    <script>
+        var a = ["virag","akshay","rajpal","yadav"];
+        document.write(a + "<hr>");
+
+        a.splice(-3, 1, "delete", "1-value");
+        document.write(a + "<hr>");
+        document.write("<h3>Splice through kahi value delete karnya sathi </h3>");
+    </script>
+    <script>
+        var a = ["virag","akshay","rajpal","yadav"];
+        document.write(a + "<hr>")
+
+        a.splice(1, 2)
+        document.write(a + "<hr>")
+    </script>
+    <!-- we can used unshift method like pop...push shift and unshift  -->
+    <script>
+        var a = ["virag","akshay","rajpal","yadav"];
+        document.write(a + "<hr>")
+
+        a.splice(3, 1)
+        document.write(a + "<hr>")
+    </script>
+
+</body>
+
+</html>

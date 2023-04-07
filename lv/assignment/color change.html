@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            margin-top: 250px;
+            margin-left: 45%;
+        }
+        #id1{
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value=" CLICK ME " onclick="funName()">
+    <p id="id1"></p>
+    <script>
+        function funName(){
+            var aa = Math.floor((Math.random()*900000)+100000).toString();
+            var abc = "#" + aa;
+
+            document.body.style.background = abc;
+
+            document.getElementById("id1").innerHTML = abc;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = ["virag", "akshay", "yash"];
+        document.write(a + "<br>");
+
+        // alphabetically order madhe aale
+        a.sort();
+        document.write(a + "<br>");
+
+        //reverse order madhe varchyachya
+        var b = ["virag", "akshay", "yash"]
+        b.reverse();
+        document.write(b + "<hr>");
+    </script>
+
+    <h2> No in Decreasing Order </h2>
+    <script>
+        var virag = [2, 8, 25, 4, 3, 100];
+        virag.sort((x, y) => y - x);
+        document.write(virag);
+    </script>
+    <h2> No in Increasing Order </h2>
+    <script>
+        var virag = [2, 8, 25, 4, 3, 100];
+        virag.sort((x, y) => x - y);
+        document.write(virag + "<hr>");
+    </script>
+
+    <h2> Sort Method for array</h2>
+    <script>
+        var b = [8, 6, 2, 1, 10];
+        document.write(b.sort() + "<br>");
+
+        var c = [18, 56, 22, 11, 100];
+        document.write(c.sort() + "<br>");
+    </script>
+</body>
+</html>

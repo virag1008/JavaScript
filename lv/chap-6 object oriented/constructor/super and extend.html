@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class company {
+            constructor(){
+                this.cName = "amazon"
+            }
+        }
+
+        class employee extends company {
+            constructor(id,name){
+                super();     //this.cName = "amazon"
+                // this super word write before "this"..
+                this.id = id;
+                this.name = name;
+            }
+        }
+
+        var abc = new employee (100,"virag");
+        document.write(abc.id + " " + abc.name + " " + abc.cName)
+
+
+
+    </script>
+</body>
+</html>

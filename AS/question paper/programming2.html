@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function key_value_pair(paraobj){
+            var a = []
+            for (const key in paraobj) {
+                a.push( [ key , paraobj[key]  ]);
+            }
+            return (a)
+        }
+
+        console.log(key_value_pair({red:"red1", green:'green2', white:'white3'}));
+        
+        // o/p - [['red','red'], ['green','green'], ['white','white']]
+        
+    </script>
+
+    <script>
+         function key_value_pair(paraobj){
+            let abc = Object.entries(paraobj)
+            // let abc = Object.keys(paraobj)
+            // let abc = Object.values(paraobj)
+            
+            return abc
+        
+        }
+        console.log(key_value_pair({red:"red1", green:'green2', white:'white3'}));
+
+    </script>
+</body>
+</html>

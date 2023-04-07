@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html id="htmlId" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #outer{
+            height: 300px;
+            width: 80%;
+            background-color: yellow;
+            margin: 30px auto;
+         }
+         #inner{
+            height: 200px;
+            width: 80%;
+            background-color:pink;
+            margin: 30px auto;
+            text-align: center;
+         }
+         #inner>div{
+            width: 15%;
+            text-align: center;
+            border: 1px solid;
+            display: inline-block;
+            
+         }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <h1>outer</h1>
+        <div id="inner">
+            <h1  id="part-h1">inner</h1>
+            <div><h1>A</h1></div>
+            <div><h1>B</h1></div>
+            <div id="part-corrected"><h1 id="part">C</h1></div>
+            <div><h1>D</h1></div>
+            <div id="part-E"><h1>E</h1></div>
+        </div>
+    </div>
+    <script src="/DOM/DOM traversal Methods/parentElement n parentNode.js"></script>
+    <!-- <script src="/DOM/DOM traversal Methods/childNode.js"></script> -->
+    <!-- <script src="/DOM/DOM traversal Methods/LastChild n FirstChild.js"></script> -->
+    <!-- <script src="/DOM/DOM traversal Methods/next n previous sibling.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Moment extends Date{
+            constructor(){
+                super()
+            }
+        }
+        var abc = new Moment();
+        document.write( " Todays date is => " + abc.getDate() + "-" + (abc.getMonth()+1) + "-" + abc.getFullYear());
+        //month zero pasun start hotat mhanun 1 add kela.
+    </script>
+</body>
+</html>

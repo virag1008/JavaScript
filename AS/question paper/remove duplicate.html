@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [1,2,3,1,4,5,6,6];
+// METHOD 1
+        var vir = new Set(arr);  // object madhe convert hote duplicate kadhun.
+        console.log(vir);
+        console.log( Array.from(vir));
+
+
+// METHOD 2
+        var vir = [ ...new Set(arr)];
+        console.log(vir);
+
+
+
+// METHOD 3
+        var vj = arr.filter( (value,index) => {
+            return arr.indexOf(value) === index;
+        })
+        console.log(vj);
+        
+
+
+        // var obj = ['vir','rushi','shubh','vir'];
+        // let adi = new Set(obj)
+        // console.log(Array.from(adi));  
+        // //Array.from() method is used to convert object to array
+
+    </script>
+</body>
+</html>

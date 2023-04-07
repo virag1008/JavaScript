@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.left img {
+    height: 45px;
+    float: left;
+    padding: 10px;
+    padding-left: 20px;
+}
+.nav2 {
+    float: left;
+}
+.nav2 a {
+    float: left;
+    padding: 20px;
+    font-size: 20px;
+}
+.nav3 a {
+    float: right;
+    padding: 10px;
+    font-size: 20px;
+    margin: 10px;
+    border-radius: 30px;
+}
+.icon i {
+    float: right;
+    font-size: 20px;
+    padding: 20px;
+}
+.dpdwn {
+    position: relative;
+}
+.dpdwn i {
+    float: right;
+    font-size: 20px;
+    padding: 20px;
+}
+.hidden {
+    background-color: pink;
+    position: absolute;
+    top: 63px;
+    right: 575px;
+}
+.hidden a {
+    display: block;
+    padding: 7px;
+    display:none;
+}
+.dpdwn:hover .hidden a{
+    display: block;
+}
+
+#main{
+    background-color: rgb(78, 73, 73);
+    height: 63px;
+}
+.xyz a{
+    color: chartreuse;
+}
+#main a{
+    color: white;
+    text-decoration: none;
+}
+.nav2 a:hover{
+    background-color: rgb(19, 179, 19);
+}
+.left img:hover{
+    opacity: 0.5;
+}
+#main i:hover{
+    color:rgb(19, 179, 19) ;
+}
+.nav3 span{
+    border: 1px solid;
+    font-size: 10px;
+    background-color: white;
+    color: black;
+    padding:4px 8px;
+    border-radius: 10px;
+}
+.nav3 a:hover{
+    background-color:rgb(19, 179, 19);
+    border-radius: 30px;
+}
+.nav3 .cert{
+    background-color: pink;
+    color: black;
+}
+.cert:hover{
+    color: white;
+}
+/* PAGE ONE CSS START */
+.one {
+    height: 500px;
+    background-color: rgb(2, 21, 34);
+    color: white;
+    text-align: center;
+    padding-top: 110px;
+    line-height: 1.7;
+}
+.one h1{
+    font-size: 75px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.one p{
+    color: pink;
+    font-size: 25px;
+    font-weight: bold;
+}
+.one a{
+    color: white;
+    font-weight: bold;
+}
+.one input{
+    font-size: 16px;
+    border: none;
+    border-radius: 30px 0 0 30px;
+   margin-top: 35px;
+   width: 350px;
+   padding: 10px;
+   padding-left: 25px;
+}
+.one i{
+   
+    padding: 12px 30px;
+    
+    text-align: center;
+    padding-right: 30px;
+    background-color: green;
+    border-radius: 0 30px  30px 0;
+}
+.one h3{
+    font-size: 22px;
+}
+.one h3 a:hover{
+    color: green;
+}

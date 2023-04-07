@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const obj1 = { // does not create a new scope
+            i: 10,
+            b: () => console.log(this.i, this),
+            c() {
+                console.log(this.i, this);
+            },
+        }
+        obj1.b(); // prints undefined, Window 
+        obj1.c(); // prints 10, Object 
+    </script>
+
+
+    <script>
+        const obj = {
+            num: 100,
+        };
+
+        // A simple traditional function to operate on "this"
+        const add = function (a, b, c) {
+            return this.num + a + b + c;
+        };
+
+        // call
+        const resultCall = add.call(obj, 1, 2, 3);
+        console.log(resultCall);
+
+        // apply
+        const resultApply = add.apply(obj, [1, 2, 3]);
+        console.log(resultApply);
+
+        // bind
+        const resultBind = add.bind(obj);
+        console.log(resultBind(1, 2, 3)); 
+    </script>
+
+
+    <script>
+        // A simplistic object with its very own "this".
+        const obj_3 = {
+            num: 100,
+        };
+
+        // Setting "num" on window to show how it gets picked up.
+        window.num = 2020; 
+
+        // Arrow Function
+        const add_3 = (a, b, c) => this.num + a + b + c;
+
+        // call
+        console.log(add_3.call(obj_3, 1, 2, 3)); // result 2026
+
+        // apply
+        const arr = [1, 2, 3];
+        console.log(add_3.apply(obj_3, arr)); // result 2026
+
+        // bind
+        const bound = add_3.bind(obj_3);
+        console.log(bound(1, 2, 3)); // result 2026
+
+    </script>
+</body>
+
+</html>

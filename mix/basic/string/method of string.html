@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    1.
+    <script>
+
+        // LENGTH method -length find karte it also contain spacing start with 1
+
+        var a = "virag jain";
+
+        
+        // var a="virag";
+
+        document.write(a.length + "<hr>");
+    </script> 
+    2.
+    <script>
+
+        // TO LOWERCASE method -
+        var a = "My name is Virag And This string contain ** Letters";
+
+        var b = a.toLowerCase();
+        document.write(b + "<hr>");
+    </script>
+    3.
+    <script>
+
+        // TO UPPERCASE method -
+        var a = "my name is Virag And This string contain ** Letters";
+
+        var b = a.toUpperCase();
+        document.write(b + "<hr>");
+    </script>
+    4.
+    <script>
+
+        // TO INCLUDES method -
+        var a = "my name is Virag And This string contain ** Letters";
+
+        var b = a.includes("rag");
+        document.write(b + "<br>");
+
+        var b = a.includes("rag",15);
+        document.write(b + "<hr>");
+    </script>
+    5.
+    <script>
+
+        // STARTS-WITH method -
+        var a = "my name is Virag And This string contain ** Letters";
+
+        var b = a.startsWith("my nam");
+        document.write(b + "<hr>");
+    </script>
+    6.
+    <script>
+
+        // ENDS-WITH method -
+        var a = "my name is Virag And This string contain ** Letters";
+
+        var b = a.endsWith("ters");
+        document.write(b + "<hr>");
+    </script>
+    7.
+    <script>
+
+        // SEARCH method -
+        var a = "my name is Virag And This string contain ** Letters";
+
+        var b = a.search("irag");
+        document.write(b + "<br>");
+
+        // if given word is not from statement then it show -1 value
+        document.write( a.search("iragoo") + "<hr>");
+    </script>
+    8.
+    <script>
+
+        // MATCH method -
+        var a = "my name Is Virag And This is string contain ** Letters";
+
+        // is word jitkya veles aala asel tya sarvancha milun array tayar karto. G is for global search & I is for removing case sensative. partof regular expression.
+        var b = a.match(/is/gi);
+        document.write(b + "<hr>");
+    </script>
+    9.
+    <script>
+
+        // INDEXOF method - search madhla first content chi position show karto.
+        var a = "my name is Virag And This is string contain ** Letters";
+
+        var b = a.indexOf("is");
+        document.write(b + "<br>");
+        // index 10 nantr end paryant is word jithe asnar tyachi index print hoil ( left to  right search)
+        var c = a.indexOf("is",10);
+        document.write(c + "<br>");
+
+        // this is the diffrence between indexOf And search ...search canot take second parameter as like index of .
+        
+        var c = a.indexOf("is0");
+        document.write(c + "<hr>");
+    </script>
+    10.
+    <script>
+
+        // LAST-INDEXOF method -
+        var a = "my name is Virag And This is string contain ** Letters";
+
+        var b = a.lastIndexOf("is");
+        document.write(b + "<br>");
+        // index 10 nantr beginning paryant is word jithe asnar tyachi index print hoil (right to left search)
+        var c = a.lastIndexOf("is",10);
+        document.write(c + "<br>");
+        var c = a.indexOf("is0");
+        document.write(c + "<hr>");
+    </script>
+
+    11 A.
+    <script>
+
+        // REPLACE method -
+        var a = "my name is Virag And This is string contain ** Letters";
+
+        var b = a.replace("Virag", "Mr. Developer");
+        document.write(b + "<br>");
+    </script>
+    11 B.
+    <script>
+
+        // REPLACE for all- method -
+        var a = "my name is Virag And This is string contain ** Letters";
+
+        var b = a.replace(/is/g, "WAS");
+        document.write(b + "<hr>");
+    </script>
+    12. check this in console
+    <hr>
+    <script>
+
+        // TRIM method -
+        var a = "          Brainworks        ";
+        //extra spaces remove karte but document.write madhe extra spaces automatically remove hotat
+        //document.write(a + "<hr>");
+
+        console.log(a);
+
+        var b = a.trim();
+        console.log(b);
+    </script>
+    13.
+    <script>
+
+        // CHAR AT- method -
+        //tya index no var konta letter aahe te show karte
+        var a = "my name is Virag";
+
+        var b = a.charAt(0);
+        document.write(b + "<br>");
+        var c = a.charAt(11);
+        document.write(c + "<hr>");
+    </script>
+    14.
+    <script>
+        // CHAR CODE AT- method -
+       // given index jo characer aahe tyacha skycode print hoto
+        var a = "Virag";
+
+        var b = a.charCodeAt(0);
+        document.write(b + "<br>");
+        var b = a.charCodeAt(1);
+        document.write(b + "<hr>");
+
+    </script>
+    15.
+    <script>
+        // FROM CHAR CODE AT- method -
+        // Tya number(skycode) cha kay symbol rahto keyboard madhe te show karte
+        var a = String.fromCharCode(86);
+        document.write(a+"<br>");
+        var a = String.fromCharCode(105);
+        document.write(a);
+    </script>
+
+</body>
+
+</html>

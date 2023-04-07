@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+    // var a = false;
+
+    // if (a == true ) {
+    //     console.log("a is true")
+    // } else {
+    //     console.log("a is not true")
+    // }    
+
+
+
+
+
+
+    var today = new Date().getDay();
+
+    if (today == 1 ) {
+        console.log("today is monday")
+    } else if (today == 2){
+        console.log("today is tuesday")
+    }else if (today == 3){
+        console.log("today is wednesday")
+    } else if (today == 4){
+        console.log("today is thursday")
+    } else if (today == 5){
+        console.log("today is friday")
+    }else if(today == 6){
+        console.log("today is saturday")
+    }else{
+        console.log("today is sunday")
+    }
+
+
+    switch (today) {
+
+        case 1:
+        console.log("today is monday")
+            break;
+        case 2:
+        console.log("today is tuesday")
+            break;
+        case 3:
+        console.log("today is wednesday")
+            break;
+        case 4:
+        console.log("today is thursday")
+            break;
+        case 6:
+        console.log("today is saturday")
+            break;
+        case 5:
+        console.log("today is friday")
+            break;
+        default:
+        console.log("today is sunday")
+            break;
+    }
+    </script> -->
+
+
+
+
+    <!-- <script>
+        var arr = [ "mon", "tues", "wed", "thu", "fri"];
+
+        // for (let index = 0; index < arr.length; index++) {
+        //     const element = arr[index];
+        //     console.log(element)
+        // }
+
+        var i = 0;
+
+        // while (i < arr.length) {
+        //     console.log(arr[i])
+        //     i++
+        // }
+
+        // do {
+        //     console.log(arr[i])
+        //     i++
+        // } while (i < arr.length);
+
+        for (value of arr) {
+            console.log(value)
+        } 
+    </script> -->
+
+    <!-- <script>
+        function displayName(){
+            alert("vj")
+        }
+        displayName()
+    </script> -->
+
+    <script>
+        var arr = [5, 70, 8, 656, 0, 1, 1];
+
+
+        // var max = Math.max.apply(null,arr);
+        // console.log(max);
+        // var max = Math.max.apply(this,arr);
+        // console.log(max);
+        // var max = Math.min.apply(null,arr);
+        // console.log(max);
+        // var max = Math.min.apply(this,arr);
+        // console.log(max);
+
+        // console.log(arr.sort())
+
+        console.log(Math.max(...arr));
+
+        // console.log(Math.max.length);
+
+        // console.log(Math.max());
+
+        const max = arr.reduce((a, b) => Math.max(a, b), -Infinity);
+        console.log(max);
+
+
+    </script>
+
+</body>
+
+</html>

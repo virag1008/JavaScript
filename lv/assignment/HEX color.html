@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            margin-top: 250px;
+            margin-left: 45%;
+        }
+        #id1{
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            /* background-color: ; */
+        }
+    </style>
+</head>
+<body>
+
+    <input type="button" value=" CLICK ME " onclick="funName()">
+    <p id="id1"></p>
+
+    <script>
+        function funName(){
+            const color = Math.ceil(Math.random()*10000000).toString(16);
+
+            if(color.length = 6){
+            const click = "#" + color;
+            console.log(click);
+
+            document.body.style.background = click;
+            }else if(color.length < 6){
+                var gen6dig = (color + 55)
+                var gen6dig = parseInt(color - "5")
+            }else{
+                alert("be in your limit")
+            }
+            
+            
+        }
+
+    </script>
+</body>
+</html>

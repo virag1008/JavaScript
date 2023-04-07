@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        
+      function doStep1(init, callback) {
+        //  init == 0, callback== (result1) => {...copy  }
+        const result = init + 1;
+        callback(result); //  callback (result1)
+      }
+
+      function doStep2(init, callback) {
+        const result = init + 2;
+        callback(result);
+      }
+
+      function doStep3(init, callback) {
+        const result = init + 3;
+        callback(result);
+      }
+
+      function doOperation() {
+        doStep1(0, (result1) => {
+          doStep2(result1, (result2) => {
+            doStep3(result2, (result3) => {
+              console.log(`result: ${result3}`);
+            });
+          });
+        });
+      };
+
+      doOperation();
+
+      // calculate (2,3, function (result) {
+      //   console.log(result)
+      // })
+
+    </script>
+  </body>
+</html>

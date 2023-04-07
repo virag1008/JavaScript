@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function x (){
+            console.log("namaste")
+        }
+        function y (x){
+            x()
+        }
+        // Y is a higher order function .
+        // X is a call back function .
+
+    // <!-- AREA OF CIRCLE  -->
+
+        var radius = [1,2,3,4];
+
+        function area(radius){
+            let area = [];
+            for (index = 0; index < radius.length; index++) {
+    
+              area.push(Math.PI * radius[index] * radius[index])
+            }
+           return area
+        }
+        console.log(area(radius));
+
+    // <!-- CIRCUMFERANCE OF CIRCLE  -->
+
+        function ccfce(radius){
+            let ccf = [];
+            for (index = 0; index < radius.length; index++) {
+                ccf.push( Math.PI * 2 * radius[index])
+            }
+           return ccf
+        }
+        console.log(ccfce(radius));
+
+
+    // <!-- DIAMETER OF CIRCLE  -->
+
+        function diameter(radius){
+            let dia = [];
+            for (index = 0; index < radius.length; index++) {
+                dia.push( 2 * radius[index])
+            }
+           return dia
+        }
+        console.log(diameter(radius));
+
+    </script>
+</body>
+</html>

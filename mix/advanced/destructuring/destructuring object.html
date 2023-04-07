@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var user = {
+            name : "virag",
+            age : 26 , 
+            city : "dhule"
+        }
+
+        var { name, age, city } = user;
+         console.log(name);
+         console.log(age);
+         console.log(city);
+
+
+        //  var{ name, , city } = user;
+        //  console.log(name);
+        //  console.log(age);
+        //  console.log(city);
+
+         // rule 1 -  object key (property) and variable name should be same ...if we dont give name any variable then it not only show undefined but error also occared.
+
+
+         // with using provideing short name 
+
+        var user = {
+            name : "virag",
+            age : 26 , 
+            city : "dhule"
+        } 
+
+        var{ name:n, age: a, city:c } = user;
+         console.log(name);
+         console.log(age);
+         console.log(city);
+         console.log(n);
+         console.log(a);
+         console.log(c);
+
+        
+
+
+
+    </script>
+</body>
+</html>

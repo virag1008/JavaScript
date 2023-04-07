@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        #iddiv {
+            width: 70%;
+            height: 325px;
+            border: 2px solid rgb(42, 80, 4);
+            box-shadow: 4px 5px 6px black;
+            text-align: center;
+            margin-top: 130px;
+            background-color:rgb(118, 224, 118) ;
+        }
+
+        button {
+            font-size: 25px;
+            background-color: gold;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: darkturquoise;
+        }
+
+        #idauthor {
+            float: right;
+            margin-right: 20px;
+            font-size: 20px;
+            color: rgb(179, 54, 9);
+            margin-top: 0;
+        }
+
+        #idquotes {
+            font-size: 25px;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body bgcolor="lightgreen">
+
+    <div id="iddiv">
+        <button id="idbutton"> Generate Quotes </button>
+        <p id="idquotes"> Education is the most powerful weapon which you can use to change the world.</p>
+        <p id="idauthor">Nelson Mandela </p>
+    </div>
+
+
+    <script>
+        document.getElementById("idbutton").addEventListener("click", changeText);
+
+        var a = 0;
+
+        function changeText() {
+            a = a + 1;
+
+            if (a == 1) {
+                document.getElementById("idquotes").innerHTML = "Life is too short and sweet to be spent by cribbing and complaining about things. Here are some random quotes about the most wonderful gift that we've got";
+
+                document.getElementById("idauthor").innerHTML = "Life";
+            }
+            else if (a == 2) {
+                document.getElementById("idquotes").innerHTML = "The price of anything is the amount of life you exchange for it.";
+
+                document.getElementById("idauthor").innerHTML = "David Thoreau";
+
+            }
+            else if (a == 3) {
+                document.getElementById("idquotes").innerHTML = "Humor is richly rewarding to the person who employs it. It has some value in gaining and holding attention. But it has no persuasive value at all.";
+
+                document.getElementById("idauthor").innerHTML = "John Kenneth Galbraith";
+
+            }
+            else if (a == 4) {
+                document.getElementById("idquotes").innerHTML = "A critic is someone who never actually goes to the battle, yet who afterwards comes out shooting the wounded.";
+
+                document.getElementById("idauthor").innerHTML = "Tyne Daly";
+
+            }
+            else if (a == 5) {
+                document.getElementById("idquotes").innerHTML = "Life is like a landscape. You live in the midst of it but can describe it only from the vantage point of distance";
+
+                document.getElementById("idauthor").innerHTML = "Charles Lindbergh";
+
+                a = 0;
+
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

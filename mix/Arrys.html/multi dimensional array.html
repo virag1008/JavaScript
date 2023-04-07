@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var VJ=[
+           ["Virag",27,"male","BE"],
+           ["Plk",29,"female","BA"],
+           ["Tom",17,"male","LLB"],
+        ]
+
+        //document.write(VJ[1][0])
+        // here two square braces shows ..first for outer array and second for inner array.
+
+        //array length sathi
+        document.write(VJ.length);
+
+        //table sathi
+
+        document.write("<table border='1px' cellspacing='0'>")
+      
+            // length taklya mule in future array increase zale tari code madhe error yet nahi...
+            
+        for(var a=0;a<VJ.length;a++){
+            document.write("<tr>");
+            for(var b=0;b< VJ[a].length;b++){ 
+                document.write( "<td>" + VJ[a][b]+ "</td>" );
+            }
+            document.write("</tr>");
+        }
+
+        document.write("</table>")
+    </script>
+</body>
+</html>

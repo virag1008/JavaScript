@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Employee {
+            constructor(name, age, salary) {
+                this.ename = name;
+                this.eage = age;
+                this.esalary = salary;
+            }
+            details1() {
+                document.write(`<h3> Employee income </h3>
+                Employee salary - ${this.esalary} <hr>`)
+            }
+        }
+
+        class Manager extends Employee {
+            details2() {
+                let ta = 3000;
+                let pa = 2000;
+                let total = this.esalary + ta + pa;
+                document.write(`<h3> Managers income </h3>
+                Manager salary -${total}  <hr>`)
+            }
+        }
+
+        class Director extends Manager {
+            details3() {
+                super.details1();
+                super.details2();
+
+                let total = this.esalary + 30000;
+                document.write(`<h3> directors income </h3>
+                director name - ${this.ename} <br>
+                director age - ${this.eage} <br>
+                director salary - ${total} <hr>`)
+            }
+        }
+
+        var dir_obj = new Director("virag", 26, 50000);
+        dir_obj.details3();
+
+    </script>
+
+
+
+    <!-- <script>
+
+        class Employee {
+            constructor(name, age, salary) {
+                this.ename = name;
+                this.eage = age;
+                this.esalary = salary;
+            }
+            details1() {
+                document.write(`<h3> Employee income </h3>
+            Employee name - ${this.ename} <br>
+            Employee age - ${this.eage} <br>
+            Employee salary - ${this.esalary} <hr>`)
+            }
+        }
+
+        class Manager extends Employee {
+            details2() {
+                let ta = 3000;
+                let pa = 2000;
+                let total = this.esalary + ta + pa;
+                // this.TOTAL = total;
+                document.write(`<h3> Managers income </h3>
+            Manager name - ${this.ename} <br>
+            Manager age - ${this.eage} <br>
+            Manager salary -${total}  <hr>`)
+            }
+        }
+
+        class Director extends Manager {
+            details3() {
+                //super.details1();
+                //super.details2();
+                let ta = 3000;
+                let pa = 2000;
+                let total = this.esalary + ta + pa + 25000;
+                document.write(`<h3> directors income </h3>
+            director name - ${this.ename} <br>
+            director age - ${this.eage} <br>
+            director salary - ${total} <hr>`)
+            }
+        }
+
+        var dir_obj = new Director("virag", 26, 50000);
+        dir_obj.details3();
+        var dir_obj = new Manager("shubham", 26, 50000);
+        dir_obj.details2();
+        var dir_obj = new Employee("shankar", 24, 50000);
+        dir_obj.details1();
+
+    </script> -->
+
+
+
+    <!-- <script>
+        class Employee {
+            constructor() {
+                console.log("hello world");
+            }
+        }
+        class Manager extends Employee {
+        }
+        var Empobj = new Manager();
+    </script> -->
+
+
+
+
+    <!-- <script>
+        class Employee {
+            constructor(name) {
+                console.log("hello " + name );
+            }
+        }
+        class Manager extends Employee {
+        }
+        var Empobj = new Manager("virag");
+    </script> -->
+
+
+    <!-- <script>
+        class Employee {
+            constructor(name) {
+                this.Empname = name;
+                console.log("hello " + this.Empname );
+            }
+            detail(){
+                console.log(" HII " + this.Empname);
+            }
+        }
+        class Manager extends Employee {
+        }
+
+        var Mgobj = new Manager("virag");
+        Mgobj.detail();
+    </script> -->
+
+
+
+    <!-- <script>
+            class Employee {
+                constructor(name) {
+                    this.Empname = name;
+                    console.log("hello " + this.Empname );
+                }
+            }
+
+            class Manager extends Employee {
+                constructor() {
+                    super();
+                    console.log("hello ");
+                }
+            }
+
+            var Mgobj = new Manager("virag");
+        </script> -->
+
+
+    <!-- <script>
+        class Employee {
+            constructor(name) {
+                console.log("hello  - " + name);
+            }
+        }
+
+        class Manager extends Employee {
+            constructor(  ) {
+                super();
+                console.log("hello " );
+            }
+        }
+
+        var Mgobj = new Manager("virag");
+    </script> -->
+
+
+    <!-- <script>
+        class Employee {
+            constructor(name) {
+                console.log("hello  - " + name);
+            }
+        }
+
+        class Manager extends Employee {
+            constructor(nam  ) {
+                super();
+                console.log("hello - " + nam );
+            }
+        }
+        var Mgobj = new Manager("virag");
+    </script> -->
+
+
+    <!-- <script>
+        class Employee {
+            constructor(name) {
+                this.Empname = name;
+                console.log("hello " + this.Empname );
+            }
+            detail(){
+                console.log(" HII " + this.Empname);
+            }
+        }
+        class Manager extends Employee {
+            info(){
+                console.log("method from manager class- " + this.Empname)
+            }
+        }
+
+        var Mgobj = new Manager("virag");
+        Mgobj.info();
+        Mgobj.detail();
+        
+    </script>  -->
+
+    <!-- <script>
+        class Employee {
+            constructor(name) {
+                this.Empname = name;
+                console.log("hello " + this.Empname);
+            }
+            detail() {
+                console.log(" HII " + this.Empname);
+            }
+        }
+        class Manager extends Employee {
+            info() {
+
+                // super()  -SHOW ERROR 
+                 super.detail();
+                console.log("method from manager class- " + this.Empname)
+            }
+        }
+
+        var Mgobj = new Manager("virag");
+        Mgobj.info();
+        Mgobj.detail();
+
+    </script> -->
+
+
+    <!-- <script>
+        class Employee {
+            constructor(name, age, salary) {
+                this.Empname = name;
+                this.empage = age;
+                this.empsalary = salary;
+                console.log("hello " + this.Empname );
+            }
+            detail(){
+                console.log(`hello ${this.Empname} your age is ${this.empage} and salary is ${this.empsalary}`);
+            }
+        }
+        class Manager extends Employee {
+        }
+
+        var Mgobj = new Manager("virag",25,25000);
+        Mgobj.detail()
+        
+    </script>  -->
+
+</body>
+
+</html>

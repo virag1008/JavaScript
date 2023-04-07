@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var abc={
+            name:'virag',
+            age:27,
+            city:'dhule'
+        }
+
+        console.log(abc);
+        document.write(abc+"<hr>");
+
+        for(xyz in abc){
+            document.write(xyz+"<br>");
+        }
+
+        document.write("<hr>");
+        for(xyz in abc){
+            document.write( abc[xyz]+"<br>");
+        }
+
+        document.write("<hr>");
+        for(xyz in abc){
+            document.write( xyz + " : "  + abc[xyz]+"<br>");
+        }
+
+    </script>
+</body>
+</html>

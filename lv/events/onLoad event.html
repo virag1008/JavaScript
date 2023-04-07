@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head  onload="alert('hii')">
+    <!-- head tag madhe onload kadhich work karat nahi ...body tag madhech add kara nehmi-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body  onload="alert('hii')">
+
+    <!-- this body part onload function not work bcoz document and window onload overrides it -->
+
+    <!-- if we comment the script tag then it will work.. -->
+
+    <script>
+        document.onload = alert("document.onload");
+        window.onload = alert("window.onload");
+    </script>
+</body>
+</html>

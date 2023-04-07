@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onkeypress="virag()" onresize="virag1()" >
+    <!-- window jevha resize karu tevha lagech popup alert yeil -->
+    
+    <script>
+        function funname(){
+            document.write("hello everyone ");
+        }
+        function virag(){
+            alert("hello everyone ");
+        }
+        function virag1(){
+            alert("hello everyone ");
+        }
+    </script>
+
+    <button onclick="funname()" > Click me </button>
+    <br>
+    <br>
+    <button ondblclick="funname ()" >double Click me </button>
+    <br>
+    <br>
+    <p oncontextmenu="virag()">right click on me </p>
+    <h1 onmouseup="virag()">mouse over </h1>
+    <!-- mouse click sodlyavar kam karte -->
+    <p>click on</p>
+</body>
+</html>

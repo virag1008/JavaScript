@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <script>
+      //  Get nth character of string
+      // Write a function that takes a string (a) and a number (n) as argument. Return the nth character of 'a'.
+
+      function myFunction(a, n) {
+        // const arr = a.split("");
+        console.log(a[n - 1]);
+      }
+      myFunction("abcd", 1);
+      myFunction("zyxbwpl", 5);
+      myFunction("gfedcba", 3);
+    </script> -->
+    <!-- 
+    <script>
+      // Check if property exists in object
+      function myFunction(a, n) {
+        console.log(n in a);
+      }
+      myFunction({ a: 1, b: 2, c: 3 }, "b");
+      myFunction({ x: "a", y: "b", z: "c" }, "a");
+      myFunction({ x: "a", y: "b", z: undefined }, "z");
+    </script> -->
+
+    <!-- <script>
+      // Get first n elements of an array
+      function myFunction(a) {
+        // console.log([a[0],a[1],a[2]]);
+        console.log(a.splice(0, 3));
+      }
+      myFunction([1, 2, 3, 4]);
+      myFunction([5, 4, 3, 2, 1, 0]);
+    </script> -->
+
+    <!-- <script>
+      // Get first n elements of an string
+      function myFunction(a) {
+        //console.log(a.split("").splice(0, 3).join(''));
+        console.log(a.slice(0, 3));
+      }
+      myFunction("abcdefg");
+      myFunction("1234");
+      myFunction("fgedcba");
+    </script> -->
+
+    <!-- <script>
+      function myFunction(a) {
+        // var ab = a.split();
+        // console.log(Object.assign({}, ab));
+      }
+      myFunction("a"); // {key:'a'}
+      myFunction("v"); // {key:'v'}
+      myFunction("x"); // {key:'x'}
+    </script> -->
+
+    <!-- <script>
+      function myFunction(a) {
+        console.log(a.slice(-3));
+      }
+      myFunction([1, 2, 3, 4]); // [2,3,4]
+      myFunction([5, 4, 3, 2, 1, 0]); // [(2, 1, 0)];
+      myFunction([99, 1, 1]); // [(99, 1, 1)];
+    </script> -->
+
+    <!-- <script>
+      function myFunction(a) {
+        // console.log( a.split("").slice(0,(a.length - 3)).join(''));
+        console.log(a.slice(0, -3))
+      }
+      myFunction("abcdefg"); //("abcd");
+      myFunction("1234"); //("1");
+      myFunction("fgedcba"); //("fged");
+    </script> -->
+
+    <!-- <script>
+      function myFunction(a, b) {
+        //Return the number of days between two dates
+
+        // console.log(a.getDate()-b.getDate())
+        var ab = a.getTime()-b.getTime();
+        var bc = Math.abs(ab/( 1000 * 60 * 60 * 24))
+        console.log(bc);
+      }
+      myFunction(new Date("2020-06-11"), new Date("2020-06-01")); // 10;
+      myFunction(new Date("2000-01-01"), new Date("2020-06-01")); // 7457;
+    </script> -->
+
+    <!-- <script>
+      // Delete element from Set
+      function myFunction(set, val) {
+        return [...set, ...val];
+      }
+      myFunction(new Set([1, 2, 3]), 1); // new Set([2, 3])
+      myFunction(new Set("12345"), "3"); //new Set(['1', '2', '4', '5'])
+      myFunction(new Set([1, 2, 3]), 4); // new Set([1, 2, 3])
+    </script> -->
+
+    <!-- <script>
+
+      console.log(new Date(1000));
+      console.log(new Date( " 2011 dec 21" ) )
+      console.log(new Date( ) )
+      console.log(new Date( ).toDateString() )
+      console.log(new Date( ).toLocaleTimeString() )
+      console.log(new Date( ).toLocaleDateString() )
+      console.log(new Date( ).getTime() )
+      console.log(new Date( "01/12/2022") )
+    </script> -->
+
+    <!-- <script>
+       
+       function DisplayFullName(fName, lName) {
+        // These are public field
+
+        this.fName = fName;
+        this.lName = lName;
+
+        var FullName;
+        // Private Function..
+        var getFullName = function () {
+          // This is private variable only accessible only inside function..
+
+          FullName = fName + lName;
+          return FullName;
+        };
+
+        //Privilledge Function..
+
+        this.Privilledge = function () {
+          return getFullName;
+        };
+
+        DisplayFullName.prototype.getPublicFullName = function () {
+          return this.Privilledge;
+        };
+      }
+
+      let Info = new DisplayFullName("Jenny", "Winget");
+
+      console.log(Info.fName);
+      console.log(Info.lName);
+      console.log(Info.FullName);
+      console.log(Info.getFullName);
+      console.log(Info.Privilledge);
+   
+    </script> -->
+
+    <!-- <script>
+      var arr = [1, 2, 3, 4, 1, 2, 8];
+      var empty = [];
+      function fun(xyz) {
+        for (i = 0; i < arr.length; i++) {
+          for (j = i+1; j < arr.length; j++) {
+            if (xyz[i] == xyz[j]) {
+              empty.push(xyz[i])
+            }
+          }
+        }
+        return empty;
+      }
+
+      console.log(fun(arr));
+
+    </script> -->
+
+    <script>
+      // const obj = {
+      //   'name':'shubh'
+      // }
+      // console.log(obj)
+
+      // class Bike {
+      //   constructor(name){
+      //     this.name = name;
+
+      //   }
+      // }
+      // Bike.prototype.id = 101;
+
+      // let vj = new Bike('shubh');
+      // console.log(Bike.hasOwnProperty('name'))
+      // console.log(Bike.hasOwnProperty('id'))
+      // console.log(vj.id)
+      // console.log(vj)
+      // console.log(vj)
+
+      // setTimeout(() => {
+      //   alert("hello");
+      // }, 3000);
+
+      // document.write("dzdbchj");
+
+      // // naming convention..
+      // let firstName ;
+      // let first_Name ;
+      // let FirstName;
+
+      // function getFullName (){
+
+      // }
+
+      // x =20
+      // console.log(x);
+
+      // let x;
+
+      // // tdz
+      // x = 10;
+      // console.log(x)
+
+      // // function overloading..
+      // function fun(name){
+      //   return name;
+      // }
+      //  console.log(fun('kissu'));
+
+      // function fun(fname,lname){
+      //   return fname + " " +lname;
+      // }
+      // console.log(fun('kissu', 'tarate'));
+
+      // scope
+      // function df(){
+
+      //   {let x = 10;}
+      //   console.log(x)
+      // }
+      // df()
+
+      // associative array
+      // JavaScript does not support associative arrays.
+
+      // let obj = {
+      //   name : 'kissu'
+      // };
+      // for (const key in obj) {
+      //   console.log('fname:' + key + ' value:' + obj[key])
+      // }
+
+      //object create
+
+      // var obj = Object.create();
+
+      // function fruit(){
+      //   this.fruit = 'apple';
+      //   this.car = 'ferari';
+      // }
+
+      // function cricket(){
+      //   fruit.call(this)
+      // }
+      // cricket.prototype = Object.create(fruit.prototype);
+
+      // console.log(new cricket())
+
+    //   function display(para1, para2) {
+    //     setTimeout(() => {
+    //       console.log(para1);
+    //       para2();
+    //     }, 1000);
+    //   }
+
+    //   function normal() {
+    //     console.log("bygbhj");
+    //   }
+    // display('one',normal);
+
+
+
+
+
+
+
+
+    // last in fir\st out...
+    // console.log('one')
+
+    // setTimeout(() => {
+    // console.log('two')
+    // }, 3000);
+
+    // console.log('three')
+
+    var a = 10;
+    var b = a;
+
+    b = 15;
+    console.log(a);
+
+    // let obj = {
+    //   1:10
+    // }
+    //  var bb = obj;
+
+    //  console.log(bb)
+
+    //  var bb 
+
+
+
+
+
+
+
+
+
+
+
+    // function DisplayFullName(fName, lName) {
+    //     this.fName = fName;
+    //     this.lName = lName;
+
+    //     var FullName;
+    
+    //     var getFullName = function () {
+    //       FullName = fName + lName;
+    //       return FullName;
+    //     };
+
+    //     //Privilledge Function..
+
+    //     this.Privilledge = function () {
+    //       return getFullName;
+    //     };
+
+    //     DisplayFullName.prototype.getPublicFullName = function () {
+    //       return this.Privilledge;
+    //     };
+    //   }
+
+    //   let Info = new DisplayFullName("Jenny", "Winget");
+
+    //   console.log(Info.fName);
+    //   console.log(Info.lName);
+    //   console.log(Info.FullName);
+    //   console.log(Info.getFullName);
+    //   console.log(Info.Privilledge);
+  
+    </script>
+  </body>
+</html>

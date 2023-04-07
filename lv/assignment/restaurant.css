@@ -1,0 +1,81 @@
+body{
+    font-family: 'Kaushan Script', cursive;
+}
+
+.nav-link{
+    color: palevioletred;
+    font-size: 25px;
+}
+
+.navbar-collapse ul{
+    margin-left: 250px;
+}
+
+.pose{
+    margin-right: 50px;
+    padding-top: 7px;
+}
+.mrgR{
+    margin-right: 50px;
+}
+
+.headerPart{
+    min-height: calc(100vh - 76px);
+    background: linear-gradient(rgba(194, 234, 75, 0.544),#e7a1ae3c), url(https://js-beginners.github.io/filter-project/img/headerBcg.jpeg) center/cover fixed no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-attachment: fixed;
+}
+.headerPart div {
+    color: blueviolet;
+    z-index: 2;
+}
+
+.headerPart div span{
+    font-size: 65px;
+    color:  palevioletred;
+}
+.headerPart div button{
+    font-size: 20px;
+}
+
+.mypart{
+    min-height: calc(100vh - 76px);
+    border: 1px solid black;
+}
+
+.sec-1{
+    float: left;
+    width: 40%;
+    min-height: calc(100vh - 76px);
+    border: 1px solid red;
+}
+.sec-1 div{
+    margin-top: 125px;
+    margin-left: 100px;
+}
+.sec-1 span{
+    font-size: 60px;
+    color: palevioletred ;
+}
+.sec-1 h1{
+    padding-bottom: 25px;
+}
+.sec-2{
+    float:right;
+    width: 60%;
+    min-height: calc(100vh - 76px);
+    border: 1px solid pink;
+}
+.sec-2 img{
+    width: 65%;
+    margin-top: 125px;
+    margin-left: 190px;
+    transition:border 2s;
+}
+.sec-2 img:hover{
+    border: 10px solid rgba(240, 222, 24, 0.759)
+}
+

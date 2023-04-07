@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="funName_1()"> OPEN WINDOW </button>
+    <button onclick="funName_2()" > MOVE WINDOW </button>
+    <script>
+        var virag;
+        function funName_1(){
+            virag = window.open("","","width=500px,height=300px,left=100px,top=100px" );
+            virag.document.write("<p> This new window is made bcoz other windows not gives permission to access them .</p>")
+        }
+        function funName_2(){
+            //virag.window.moveBy(150,150);
+            virag.window.moveTo(150,150);
+            virag.focus();
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        const arr = [1,2,3,4,5];
+
+        let double = arr.map( (x) => x * 2)
+        console.log(double)
+
+        let odd = arr.filter( (x) => x % 2 )
+        console.log(odd)
+
+        let even = arr.filter( (x) => x % 2 == 0)
+        console.log(even)
+        // filter method madhe faktt condition dyaychi ...nantr je value condition satisfy karel te array madhe yeil ....array che number change hot nahi ...new rray form hoto
+
+    </script> -->
+
+
+    <script>
+        // for summation
+
+        let arr = [1,2,3,4,5];
+
+        // let sum = arr.reduce((pre , current) => {
+        //     return pre += current
+        // },0)
+        // console.log(sum);
+
+        // for max no
+        let maxno = arr.reduce( (acc,next) => {
+            if(next > acc){
+                acc = next ;
+            }
+            return acc
+        })
+        console.log(maxno);
+
+        
+    </script>
+
+
+    <script>
+        // for max no
+        // let abc = [1,2,3,4,5];
+
+        // function maxno(){
+        //     let maxi = 0;
+        // for(let i = 0; i < abc.length; i++){
+        //     if (abc[i] > maxi) {
+        //         maxi = abc[i];
+        //     }
+        // }
+        // return maxi
+        // }
+        
+        // console.log(maxno());
+    </script>
+
+</body>
+</html>

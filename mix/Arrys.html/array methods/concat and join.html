@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1st way
+    
+        var vir=["name","school","address"];
+        var virNew=vir.concat("class","roll no.")
+
+        document.writeln(virNew + "<hr>");
+        console.log( typeof vir );
+
+        // 2nd WAY
+
+        var vir=["name","school","address"];
+        var virNew="class"
+        var virLatest=["college","Mob no."]
+        var total=vir.concat(virNew, virLatest)
+
+        document.writeln(total + "<hr>"); 
+
+
+
+        document.writeln("<h1> Join method </h1>");
+    // -------------------------------------------------
+    //JOIN
+    
+
+    
+        var a= ["Virag","Ajit","Jain"];
+        var b=a.join(" ");
+        document.write(b+"<br>");
+        // (,) chya place var space add hote and array looks like string...and we can add diffrent symbols and keys
+
+        var a= ["Virag","Ajit","Jain"];
+        var b=a.join(" * ");
+        document.write(b);
+    </script>
+
+</body>
+</html>

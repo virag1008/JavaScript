@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function employer(id, name) {
+            this.id = id;
+            this.name = name;
+        }
+
+        function PermanentEmpo(id, name) {
+            employer.call(this, id, name)
+        }
+
+        var perE = new PermanentEmpo(10, "virag jain")
+        document.write(perE.name);
+        document.write("<hr>");
+    </script>
+
+
+    <script>
+        function employer(id, name) {
+            this.id = id;
+            this.name = name;
+        }
+
+        function PermanentEmpo(id, name) {
+            employer.call(this, id, name)
+        }
+
+        function TemporaryEmpo(id, name) {
+            employer.call(this, id, name)
+        }
+
+        var perE = new PermanentEmpo(10, "virag jain")
+        var TemE = new PermanentEmpo(15,"shankar p.")
+
+        document.write(perE.name);
+        document.write("<br>");
+        document.write(perE.id);
+        document.write("<br>");
+        document.write(TemE.name);
+        document.write("<br>");
+        document.write(TemE.id);
+    </script>
+</body>
+
+</html>

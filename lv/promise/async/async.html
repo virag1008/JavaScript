@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="id1"></p>
+    <script>
+        function display(demo){
+            document.getElementById("id1").innerHTML = demo;
+        }
+
+        async function funName (){
+            return "LearnVern is awesome"
+        }
+
+        funName().then(
+            function(value){display(value)},
+            function(error){display(error)}
+        );
+
+        // Promise123 = new Promise ( function (resolve,reject){
+        //     resolve ("ok")
+        //     reject ("error occared")
+        // })
+
+        // Promise123.then(
+        //     function(value){display(value)},
+        //     function(error){display(error)}
+        // );
+    </script>
+</body>
+</html>
